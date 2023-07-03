@@ -1,0 +1,27 @@
+@media(min-width:491px){
+    img{
+        width:10%;
+    }
+}
+img{
+    border:3px solid black;
+}
+body{
+    background-color: #4E4A59;
+    color:white;
+}
+a{
+    font-size:1rem;
+    text-decoration: none;
+    color:#EAF9D9;
+}
+a:hover{
+    color:#FCFDAF;
+}
+a:active{
+    color:#CAFFB9;
+}
+a:focus{
+    border:2px soliid black;
+    color:#63D2FF;
+}

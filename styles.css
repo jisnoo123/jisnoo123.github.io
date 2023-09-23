@@ -13,6 +13,9 @@ body{
     background-color: #4E4A59;
     color:white;
 }
+a.college{
+    color:#FEE1C7;
+}
 a{
     font-size:1rem;
     text-decoration: none;

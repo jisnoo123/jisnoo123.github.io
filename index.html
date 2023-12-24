@@ -1,37 +1,242 @@
-<html>
-    <head>
-        <link rel="stylesheet" href="styles.css">
-        <title>Jisnoo Dev Pal</title>
-    </head>   
-    <body>   
-        <a href="index.html">
-            Home
-        </a>
-        &nbsp;
-        <a href="aboutme.html">
-            About me
-        </a>
-        &nbsp;
-        <a href="academics.html">
-            Academics
-        </a>
-        &nbsp;
-        <a href="credentials.html">
-            Certificates
-        </a>
-        <hr></hr>
+<!DOCTYPE html>
+<html lang="en">
 
-        <h1>Jisnoo Dev Pal</h1>
-        <h2>
-            Welcome to my website.
-        </h2>
-        <p>
-            I am a first year BSc Computer Science student at Ramakrishna Mission Residential College (Autonomous), Narendrapur.
-        </p>
-        <img src="Profilepic.jpg" 
-            width="35%"
-        />
-        <h2>Jisnoo</h2>
-        <footer>Copyright ©. All rights reserved 2023.</footer>   
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Jisnoo's Website</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+  <!-- Custom CSS -->
+  <style>
+    body {
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    .navbar {
+      background-color: #6c757d;
+    }
+
+    .navbar-dark .navbar-nav .nav-link {
+      color: #fff;
+    }
+
+    .navbar-dark .navbar-toggler-icon {
+      background-color: #fff;
+    }
+
+    .jumbotron {
+      background-color: #715806;
+      color: #fff;
+      padding: 60px;
+    }
+
+    .info-section {
+      background-color: #715806;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .profile-picture {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+    }
+
+    .copyright-section {
+      background-color: rgb(136, 6, 6);
+      color: #fff;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    /* .certificates-section,
+    .projects-section {
+      background-color: #ffffff;
+      padding: 50px 20px;
+      margin-top: 20px;
+      border-radius: 10px;
+    } */
+
+    /* Add additional styling as needed */
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation Bar
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="#"> Jisnoo</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button> -->
+    
+  </nav>
+
+  <!-- Jumbotron -->
+  <div class="jumbotron">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-3">
+          <img src="./images/Profilepic.jpg" alt="Profile Picture" class="profile-picture">
+        </div>
+        <div class="col-md-9">
+          <div class="info-section">
+            <h1 class="display-4" style="font-weight: bold;">Jisnoo Dev Pal</h1>
+            <p>B.Sc. (Hons.) Student, Computer Science</p>
+
+            <!-- Address -->
+            <h4>Address</h4>
+            <p>Ramakrishna Mission Residential College (Autonomous), Narendrapur, 
+              Kolkata, West Bengal 700103</p>
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Home Section -->
+  <div class="container">
+    <!-- News Section -->
+    <h2>News</h2>
+    <hr style="width:50%;text-align:left;margin-left:0">
+
+    <itemize>
+
+        <span style="font-weight: bold;"> <b>July '23 </b></span> - Admitted to RKMRC.  <br>    
+        <span style="font-weight: bold;"> <b>May '23 </b> </span> - Recognized as the 
+        <b>ISC School Topper</b>.
+        <br>
+
+    </itemize>
+
+    <br>
+    <br>
+
+    <section id="biography">
+      <h2>Biography</h2>
+      <hr style="width:50%;text-align:left;margin-left:0">
+
+      <p>I am a first year BSc Computer Science student at Ramakrishna 
+        Mission Residential College (Autonomous), Narendrapur.</p>
+    </section>
+
+    <br>
+    <br>
+
+    <section id="education">
+        <h2 >Education</h2>
+        <hr style="width:50%;text-align:left;margin-left:0">
+      
+        <a href="https://rkmrc.in/ug-departments/computer-science/" target="_blank"> Ramakrishna Mission Residential College (Autonomous), Narendrapur </a>  
+        (<b>July '23 - Present</b>) - B.Sc. (Hons.) in Computer Science
+        <br>
+        
+        <a href="http://www.centralmodernschool.in/" target="_blank"> 
+        Central Modern School, Baranagar </a> (<b>2009 - 2023</b>) - Secondary Education. 
+        <br> 
+         
+    </section>
+
+    <br>
+    <br>
+
+    <!-- Projects Section -->
+    <div class="projects-section">
+      <h2>Honors and Awards</h2>
+      <hr style="width:50%;text-align:left;margin-left:0">
+
+      <p><hr style="width:50%;text-align:left;margin-left:0">
+          
+        <b>Dec' 2023</b>-  Felicitated by Baranagar Municipality for outstanding performance in ISC 2023. 
+        <br>
+
+        <b>Aug' 2023</b>-  Recognized and honored by <a href="https://www.centralmodernschool.in/uploads/achievements/1686800393-DIGITAL%20copy%20copy.JPG" 
+        alt="school" target="_blank"> Central Modern School as the top-performing student</a>.  
+        <br>
+
+        <br></p>
+    </div>
+
+    <br>
+    <br>
+
+    <!-- Certificates Section -->
+    <div class="certificates-section">
+        <h2>Certificates</h2>
+        <hr style="width:50%;text-align:left;margin-left:0">
+
+        <b>My Specializations</b>
+        <br>
+
+        <a href="https://coursera.org/share/a8c4a3f5cd2cecaa88bb3f01b3da7e9e" class="certifications">Python For Everybody
+           - University of Michigan</a>
+        <br><br>
+
+        <b>My Certificates</b>
+        <br>
+        
+        <a href="https://coursera.org/share/5050bb5d24b11a40159812476994927c" 
+        class="certifications">Getting started with Python - University of Michigan</a>
+        <br>
+
+        <a href="https://coursera.org/share/a8936d8c24eabb5b47982912d8563dbc"
+         class="certifications">Python Data Structures - University of Michigan</a>
+         <br>
+
+        <a href="https://coursera.org/share/0a4048f2c4408589800b542a21f6278b"
+         class="certifications">Using Python to access Web Data - University of
+          Michigan</a>
+          <br>
+
+        <a href="https://coursera.org/share/92363ec6bed330dff349f7d11d1cc25d"
+         class="certifications">Using Databases with Python - University of Michigan</a>
+         <br>
+
+        <a href="https://coursera.org/share/d495d884d1f3060ab71ff22c3cce65f6"
+         class="certifications">Capstone: Retrieving, Processing, and Visualizing Data 
+         with Python (Honors) - University Of Michigan</a>
+         <br>
     </body>
-</html>  
+    </div>
+
+    <br>
+    <br>
+
+    
+    <section id="interests-hobbies">
+    <h2>Interests and Hobbies</h2>
+    <hr style="width:50%;text-align:left;margin-left:0">
+
+    <p>Table Tennis, Singing, Long Walk.</p>
+    </section>
+
+    <br>
+    <br>
+
+  </div>
+
+    <!-- Copyright Section -->
+    <div class="copyright-section">
+    <p> 2023 Copyright &copy; Jisnoo Dev Pal</p>
+    </div>
+
+  <!-- Bootstrap JS and Popper.js (Optional) -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>

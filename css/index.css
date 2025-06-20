@@ -1,0 +1,89 @@
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+body {
+    font-family: 'Lato', Verdana, Helvetica, sans-serif;
+    font-size: 14px
+}
+
+.block {
+    /* margin: 2.5%; */
+    padding: 2.5%;
+}
+
+/* From bootstrap */
+.d-flex {
+    display: -ms-flexbox !important;
+    display: flex !important;
+}
+
+.align-items-center {
+    -ms-flex-align: center !important;
+    align-items: center !important;
+}
+
+.justify-content-between {
+    -ms-flex-pack: justify !important;
+    justify-content: space-between !important;
+}
+
+.justify-content-around {
+    -ms-flex-pack: distribute !important;
+    justify-content: space-around !important;
+}
+
+/* Custom tags */
+name {
+    font-family: 'Lato', Verdana, Helvetica, sans-serif;
+    font-size: 32px;
+}
+
+heading {
+    font-family: 'Lato', Verdana, Helvetica, sans-serif;
+    font-size: 22px;
+}
+
+.paper {
+    display: flex;
+    align-items: start;
+    justify-content: flex-start;
+    vertical-align: center;
+}
+
+.paper .thumbnail {
+    padding: 20px;
+    width: 30%;
+}
+
+.paper img {
+    width: 100%;
+}
+
+.paper .content {
+    padding: 20px;
+    width: 60%;
+}
+
+.paper .title {
+    font-family: 'Lato', Verdana, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 700
+}
+
+strong {
+    font-family: 'Lato', Verdana, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+sup.highlight{
+    color: red;
+    font-weight: bold;
+}

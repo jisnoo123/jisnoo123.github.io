@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jisnoo123.github.io/sitemap.xml

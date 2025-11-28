@@ -1,5 +1,6 @@
 import { useTheme } from './hooks/useTheme';
 import Header from './components/Header';
+import Sidebar from './components/Sidebar';
 import Hero from './components/Hero';
 import News from './components/News';
 import Projects from './components/Projects';
@@ -19,6 +20,7 @@ function App() {
         Skip to main content
       </a>
       <Header isDark={isDark} toggleTheme={toggleTheme} />
+      <Sidebar />
       <main id="main-content">
         <Hero />
         <News />

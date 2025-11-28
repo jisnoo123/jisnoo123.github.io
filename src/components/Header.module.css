@@ -24,18 +24,6 @@
   height: var(--header-height);
 }
 
-.logo {
-  font-size: var(--font-size-xl);
-  font-weight: 700;
-  color: var(--color-text);
-  letter-spacing: -0.02em;
-  transition: color var(--transition-fast);
-}
-
-.logo:hover {
-  color: var(--color-accent);
-}
-
 .navList {
   display: none;
   list-style: none;

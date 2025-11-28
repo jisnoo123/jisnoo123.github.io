@@ -39,15 +39,6 @@ function Header({ isDark, toggleTheme }) {
   return (
     <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
       <nav className={styles.nav} aria-label="Main navigation">
-        <a
-          href="#hero"
-          className={styles.logo}
-          onClick={(e) => handleNavClick(e, 'hero')}
-          aria-label="Go to home section"
-        >
-          JDP
-        </a>
-
         {/* Desktop Navigation */}
         <ul className={styles.navList} role="menubar">
           {navLinks.map((link) => (

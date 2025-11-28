@@ -1,0 +1,164 @@
+.trivia {
+  background-color: var(--color-bg-secondary);
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing-6);
+}
+
+.content {
+  display: grid;
+  gap: var(--spacing-8);
+}
+
+@media (min-width: 768px) {
+  .content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.section {
+  background-color: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-6);
+}
+
+@media (min-width: 768px) {
+  .section:first-child {
+    grid-column: span 2;
+  }
+}
+
+.sectionTitle {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: var(--spacing-4);
+}
+
+.sectionTitle svg {
+  color: var(--color-accent);
+}
+
+.galleryGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-3);
+  margin-bottom: var(--spacing-4);
+}
+
+@media (min-width: 768px) {
+  .galleryGrid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+.galleryItem {
+  position: relative;
+  aspect-ratio: 1;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  background: none;
+}
+
+.galleryItem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-base);
+}
+
+.galleryItem:hover img {
+  transform: scale(1.1);
+}
+
+.galleryOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.galleryItem:hover .galleryOverlay {
+  opacity: 1;
+}
+
+.galleryOverlay span {
+  color: white;
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+}
+
+.viewAllButton {
+  width: 100%;
+  padding: var(--spacing-3) var(--spacing-4);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--color-accent);
+  background-color: transparent;
+  border: 1px solid var(--color-accent);
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.viewAllButton:hover {
+  background-color: var(--color-accent);
+  color: white;
+}
+
+.hobbies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-2);
+}
+
+.hobbyTag {
+  display: inline-block;
+  padding: var(--spacing-2) var(--spacing-4);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--color-text);
+  background-color: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  transition: all var(--transition-fast);
+}
+
+.hobbyTag:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.familyText {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.link {
+  color: var(--color-accent);
+  font-weight: 500;
+  transition: color var(--transition-fast);
+}
+
+.link:hover {
+  color: var(--color-accent-hover);
+  text-decoration: underline;
+}

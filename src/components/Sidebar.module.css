@@ -43,11 +43,11 @@
 }
 
 .navLink.active {
-  color: var(--color-accent);
+  color: var(--color-text);
 }
 
 .navLink.active .indicator {
-  background-color: var(--color-accent);
+  background-color: var(--color-text);
   width: 24px;
 }
 

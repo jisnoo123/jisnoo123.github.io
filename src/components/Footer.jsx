@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Heart, Github, Linkedin, Mail } from 'lucide-react';
+import { Github, Linkedin, Mail } from 'lucide-react';
 import { personalInfo } from '../utils/data';
 import styles from './Footer.module.css';
 
@@ -54,9 +54,6 @@ function Footer() {
           <div className={styles.copyright}>
             <p>
               © 2023-{currentYear} {personalInfo.name}
-            </p>
-            <p className={styles.madeWith}>
-              Made with <Heart size={14} className={styles.heart} aria-label="love" /> using React + Vite
             </p>
           </div>
         </motion.div>

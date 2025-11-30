@@ -198,17 +198,24 @@ section {
 /* Skip to content for accessibility */
 .skip-link {
   position: absolute;
-  top: -40px;
-  left: 0;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
   background: var(--color-accent);
   color: white;
   padding: var(--spacing-2) var(--spacing-4);
   z-index: 100;
-  transition: top var(--transition-fast);
 }
 
 .skip-link:focus {
+  position: fixed;
+  left: 0;
   top: 0;
+  width: auto;
+  height: auto;
+  overflow: visible;
 }
 
 /* Utility Classes */

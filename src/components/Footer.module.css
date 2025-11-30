@@ -73,23 +73,3 @@
   color: var(--color-text-muted);
   margin: 0;
 }
-
-.madeWith {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-1);
-}
-
-.heart {
-  color: #ef4444;
-  animation: heartbeat 1.5s ease-in-out infinite;
-}
-
-@keyframes heartbeat {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-}

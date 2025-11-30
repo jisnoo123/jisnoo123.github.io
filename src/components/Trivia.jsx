@@ -99,10 +99,9 @@ function Trivia() {
           >
             <h3 className={styles.sectionTitle}>
               <ExternalLink size={20} aria-hidden="true" />
-              Family
+              Brother&apos;s Website
             </h3>
             <p className={styles.familyText}>
-              Check out my brother&apos;s website:{' '}
               <a
                 href={trivia.brotherWebsite.url}
                 target="_blank"

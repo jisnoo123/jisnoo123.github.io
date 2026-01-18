@@ -14,7 +14,7 @@ function copy404Plugin() {
         copyFileSync(indexPath, notFoundPath)
         console.log('✓ Copied index.html to 404.html for GitHub Pages SPA routing')
       } catch (err) {
-        console.error('Failed to copy 404.html:', err)
+        console.error('Failed to copy index.html to 404.html:', err)
       }
     }
   }

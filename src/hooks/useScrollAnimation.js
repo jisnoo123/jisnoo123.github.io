@@ -14,9 +14,15 @@ export function useScrollAnimation(options = {}) {
     const element = ref.current;
     if (!element) return;
 
+    // Fallback: Make content visible after a timeout if IntersectionObserver doesn't trigger
+    const fallbackTimer = setTimeout(() => {
+      setIsVisible(true);
+    }, 100);
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
+          clearTimeout(fallbackTimer);
           setIsVisible(true);
           if (triggerOnce) {
             observer.unobserve(element);
@@ -31,6 +37,7 @@ export function useScrollAnimation(options = {}) {
     observer.observe(element);
 
     return () => {
+      clearTimeout(fallbackTimer);
       if (element) {
         observer.disconnect();
       }

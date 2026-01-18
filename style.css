@@ -1,0 +1,387 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-black: #000000;
+    --primary-yellow: #FFD700;
+    --light-yellow: #FFF8DC;
+    --dark-gray: #1a1a1a;
+    --medium-gray: #333333;
+    --light-gray: #f5f5f5;
+    --white: #ffffff;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--primary-black);
+    background-color: var(--white);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navigation */
+.navbar {
+    background-color: var(--primary-black);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-brand {
+    color: var(--primary-yellow);
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-menu a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+    letter-spacing: 0.5px;
+}
+
+.nav-menu a:hover {
+    color: var(--primary-yellow);
+}
+
+/* Hero Section */
+.hero {
+    background-color: var(--primary-black);
+    color: var(--white);
+    padding: 5rem 0;
+    text-align: center;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.profile-photo {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 4px solid var(--primary-yellow);
+    object-fit: cover;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    color: var(--primary-yellow);
+}
+
+.hero .subtitle {
+    font-size: 1.2rem;
+    color: var(--light-gray);
+    font-weight: 300;
+}
+
+/* Sections */
+.section {
+    padding: 5rem 0;
+}
+
+.section-alt {
+    background-color: var(--light-yellow);
+}
+
+.section h2 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    text-align: center;
+    letter-spacing: 1px;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary-yellow);
+}
+
+.content-box {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Biography Section */
+#bio p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    line-height: 1.8;
+    color: var(--medium-gray);
+}
+
+/* Education Section */
+.education-item {
+    margin-bottom: 2.5rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.education-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.education-item h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: var(--primary-black);
+}
+
+.education-item .date {
+    color: var(--primary-yellow);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.education-item p {
+    color: var(--medium-gray);
+    line-height: 1.7;
+}
+
+/* News Section */
+.news-item {
+    margin-bottom: 2rem;
+    padding-left: 1rem;
+    border-left: 3px solid var(--primary-yellow);
+}
+
+.news-date {
+    display: block;
+    font-weight: 600;
+    color: var(--primary-black);
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.news-item p {
+    color: var(--medium-gray);
+    line-height: 1.7;
+}
+
+/* Honors Grid */
+.honors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.honor-item {
+    text-align: center;
+}
+
+.honor-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border: 2px solid var(--primary-black);
+    margin-bottom: 1rem;
+}
+
+.honor-item h3 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: var(--primary-black);
+}
+
+.honor-item p {
+    color: var(--medium-gray);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Projects Grid */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+}
+
+.project-item {
+    background-color: var(--white);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.project-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-bottom: 3px solid var(--primary-yellow);
+}
+
+.project-item h3 {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin: 1.5rem 1.5rem 1rem 1.5rem;
+    color: var(--primary-black);
+}
+
+.project-item p {
+    color: var(--medium-gray);
+    margin: 0 1.5rem 1rem 1.5rem;
+    line-height: 1.7;
+}
+
+.project-link {
+    display: inline-block;
+    margin: 0 1.5rem 1.5rem 1.5rem;
+    color: var(--primary-black);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.project-link:hover {
+    color: var(--primary-yellow);
+}
+
+/* Trivia Grid */
+.trivia-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.trivia-item {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--white);
+    border: 2px solid var(--primary-black);
+    transition: background-color 0.3s ease;
+}
+
+.trivia-item:hover {
+    background-color: var(--primary-yellow);
+}
+
+.trivia-icon {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.trivia-item p {
+    color: var(--medium-gray);
+    line-height: 1.6;
+}
+
+.trivia-item:hover p {
+    color: var(--primary-black);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--primary-black);
+    color: var(--white);
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.footer p {
+    font-size: 0.9rem;
+    color: var(--light-gray);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-menu {
+        gap: 1rem;
+        font-size: 0.85rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero .subtitle {
+        font-size: 1rem;
+    }
+
+    .section {
+        padding: 3rem 0;
+    }
+
+    .section h2 {
+        font-size: 2rem;
+    }
+
+    .profile-photo {
+        width: 140px;
+        height: 140px;
+    }
+
+    .honors-grid,
+    .project-grid,
+    .trivia-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar .container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.75rem;
+    }
+
+    .hero {
+        padding: 3rem 0;
+    }
+}

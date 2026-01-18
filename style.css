@@ -5,40 +5,44 @@
     box-sizing: border-box;
 }
 
-/* Light Mode Colors (Default) */
+/* Light Mode Colors (Default) - Yellow/Light Theme */
 :root {
-    --primary-color: #2563eb;
-    --secondary-color: #f59e0b;
-    --accent-color: #10b981;
-    --background: #ffffff;
-    --surface: #f8fafc;
-    --surface-alt: #f1f5f9;
-    --text-primary: #1e293b;
-    --text-secondary: #64748b;
-    --text-tertiary: #94a3b8;
-    --border-color: #e2e8f0;
-    --shadow: rgba(0, 0, 0, 0.1);
-    --shadow-lg: rgba(0, 0, 0, 0.15);
-    --navbar-bg: #1e293b;
-    --navbar-text: #ffffff;
-    --hero-bg: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    --primary-color: #f59e0b;
+    --secondary-color: #eab308;
+    --accent-color: #fbbf24;
+    --background: #fffbeb;
+    --surface: #fef3c7;
+    --surface-alt: #fef9c3;
+    --text-primary: #1c1917;
+    --text-secondary: #44403c;
+    --text-tertiary: #78716c;
+    --border-color: #fde68a;
+    --shadow: rgba(0, 0, 0, 0.08);
+    --shadow-lg: rgba(0, 0, 0, 0.12);
+    --navbar-bg: #1c1917;
+    --navbar-text: #fef3c7;
+    --hero-bg: linear-gradient(135deg, #1c1917 0%, #292524 100%);
     --card-bg: #ffffff;
 }
 
-/* Dark Mode Colors */
+/* Dark Mode Colors - Black Theme */
 body.dark-mode {
-    --background: #0f172a;
-    --surface: #1e293b;
-    --surface-alt: #334155;
-    --text-primary: #f1f5f9;
-    --text-secondary: #cbd5e1;
-    --text-tertiary: #94a3b8;
-    --border-color: #334155;
-    --shadow: rgba(0, 0, 0, 0.3);
-    --shadow-lg: rgba(0, 0, 0, 0.4);
-    --navbar-bg: #0f172a;
-    --hero-bg: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-    --card-bg: #1e293b;
+    --primary-color: #fbbf24;
+    --secondary-color: #f59e0b;
+    --accent-color: #eab308;
+    --background: #0a0a0a;
+    --surface: #171717;
+    --surface-alt: #262626;
+    --text-primary: #fef3c7;
+    --text-secondary: #d6d3d1;
+    --text-tertiary: #a8a29e;
+    --border-color: #404040;
+    --shadow: rgba(0, 0, 0, 0.5);
+    --shadow-lg: rgba(0, 0, 0, 0.7);
+    --navbar-bg: #000000;
+    --navbar-text: #fef3c7;
+    --hero-bg: linear-gradient(135deg, #000000 0%, #171717 100%);
+    --card-bg: #171717;
 }
 
 body {
@@ -178,15 +182,38 @@ body.dark-mode .theme-toggle .moon-icon {
     font-size: 1.15rem;
     color: var(--secondary-color);
     font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+.hero-bio {
+    max-width: 750px;
+    margin: 2rem 0;
+    text-align: left;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.hero-bio .bio-lead {
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: var(--navbar-text);
+    margin-bottom: 1.25rem;
+    line-height: 1.7;
+}
+
+.hero-bio p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--navbar-text);
+    opacity: 0.9;
     margin-bottom: 1rem;
 }
 
-.hero .bio-short {
-    max-width: 650px;
-    font-size: 1rem;
-    line-height: 1.6;
-    color: var(--text-tertiary);
-    opacity: 0.9;
+.hero-bio p:last-child {
+    margin-bottom: 0;
 }
 
 .hero-links {
@@ -254,22 +281,6 @@ body.dark-mode .theme-toggle .moon-icon {
 .content-box {
     max-width: 800px;
     margin: 0 auto;
-}
-
-/* Biography Section */
-#bio .lead {
-    font-size: 1.25rem;
-    font-weight: 500;
-    color: var(--text-primary);
-    margin-bottom: 1.5rem;
-    line-height: 1.6;
-}
-
-#bio p {
-    font-size: 1rem;
-    margin-bottom: 1.25rem;
-    line-height: 1.8;
-    color: var(--text-secondary);
 }
 
 /* Education Section */

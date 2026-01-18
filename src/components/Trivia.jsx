@@ -1,20 +1,11 @@
-import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Image, Dumbbell, ExternalLink } from 'lucide-react';
 import { trivia, galleryImages } from '../utils/data';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
-import Gallery from './Gallery';
 import styles from './Trivia.module.css';
 
 function Trivia() {
   const { ref, isVisible } = useScrollAnimation();
-  const [galleryOpen, setGalleryOpen] = useState(false);
-  const [galleryIndex, setGalleryIndex] = useState(0);
-
-  const openGallery = (index = 0) => {
-    setGalleryIndex(index);
-    setGalleryOpen(true);
-  };
 
   return (
     <section id="trivia" className={styles.trivia} aria-labelledby="trivia-heading">
@@ -44,12 +35,10 @@ function Trivia() {
               Gallery
             </h3>
             <div className={styles.galleryGrid}>
-              {galleryImages.slice(0, 6).map((image, index) => (
-                <button
+              {galleryImages.slice(0, 6).map((image) => (
+                <div
                   key={image.id}
                   className={styles.galleryItem}
-                  onClick={() => openGallery(index)}
-                  aria-label={`View ${image.title}`}
                 >
                   <img
                     src={image.thumb}
@@ -57,17 +46,17 @@ function Trivia() {
                     loading="lazy"
                   />
                   <div className={styles.galleryOverlay}>
-                    <span>View</span>
+                    <span>Preview</span>
                   </div>
-                </button>
+                </div>
               ))}
             </div>
-            <button
+            <a
+              href="/gallery.html"
               className={styles.viewAllButton}
-              onClick={() => openGallery(0)}
             >
               View All Photos ({galleryImages.length})
-            </button>
+            </a>
           </motion.div>
 
           {/* Hobbies Section */}
@@ -115,12 +104,6 @@ function Trivia() {
           </motion.div>
         </div>
       </div>
-
-      <Gallery
-        isOpen={galleryOpen}
-        onClose={() => setGalleryOpen(false)}
-        initialIndex={galleryIndex}
-      />
     </section>
   );
 }

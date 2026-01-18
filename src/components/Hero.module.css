@@ -173,20 +173,12 @@
   background: var(--gradient-primary);
   border-radius: var(--radius-full);
   transition: all var(--transition-fast);
-  box-shadow: 0 4px 10px rgba(102, 126, 234, 0.3);
+  box-shadow: 0 4px 10px var(--shadow-primary);
 }
 
 .tag:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(102, 126, 234, 0.4);
-}
-
-.tag:nth-child(2n) {
-  background: var(--gradient-secondary);
-}
-
-.tag:nth-child(3n) {
-  background: var(--gradient-tertiary);
+  box-shadow: 0 6px 15px var(--shadow-primary-hover);
 }
 
 .socialLinks {
@@ -214,24 +206,12 @@
   border: none;
   border-radius: var(--radius-lg);
   transition: all var(--transition-fast);
-  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+  box-shadow: 0 4px 15px var(--shadow-primary);
 }
 
 .socialLink:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
-}
-
-.socialLink:nth-child(2) {
-  background: var(--gradient-secondary);
-}
-
-.socialLink:nth-child(3) {
-  background: var(--gradient-tertiary);
-}
-
-.socialLink:nth-child(4) {
-  background: var(--gradient-warm);
+  box-shadow: 0 8px 20px var(--shadow-primary-hover);
 }
 
 .imageContainer {
@@ -282,7 +262,7 @@
 
 .profileImage:hover {
   transform: scale(1.05) rotate(5deg);
-  box-shadow: 0 25px 50px rgba(102, 126, 234, 0.4);
+  box-shadow: 0 25px 50px var(--shadow-primary-hover);
 }
 
 @media (min-width: 768px) {

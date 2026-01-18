@@ -98,7 +98,7 @@ section {
   border: none;
   margin-bottom: var(--spacing-8);
   border-radius: var(--radius-full);
-  box-shadow: 0 2px 10px rgba(102, 126, 234, 0.3);
+  box-shadow: 0 2px 10px var(--shadow-primary);
 }
 
 /* Button Styles */
@@ -163,7 +163,7 @@ section {
 .card:hover {
   box-shadow: var(--shadow-xl);
   transform: translateY(-4px);
-  border-color: rgba(102, 126, 234, 0.2);
+  border-color: var(--shadow-primary);
 }
 
 .card:hover::before {

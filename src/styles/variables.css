@@ -1,7 +1,7 @@
 :root {
   /* Colors - Light Mode */
   --color-bg: #ffffff;
-  --color-bg-secondary: #fafafa;
+  --color-bg-secondary: #f5f5ff;
   --color-text: #1a1a1a;
   --color-text-secondary: #4a5568;
   --color-text-muted: #718096;
@@ -20,6 +20,10 @@
   --gradient-tertiary: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
   --gradient-warm: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
   --gradient-cool: linear-gradient(135deg, #30cfd0 0%, #330867 100%);
+  
+  /* Shadow colors */
+  --shadow-primary: rgba(102, 126, 234, 0.3);
+  --shadow-primary-hover: rgba(102, 126, 234, 0.4);
   
   /* Legacy support */
   --color-accent: #667eea;

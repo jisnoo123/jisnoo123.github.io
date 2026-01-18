@@ -64,7 +64,6 @@
   aspect-ratio: 1;
   border-radius: var(--radius-lg);
   overflow: hidden;
-  cursor: pointer;
   border: none;
   padding: 0;
   background: none;
@@ -74,7 +73,6 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform var(--transition-base);
 }
 
 .galleryItem:hover img {
@@ -87,16 +85,14 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.3);
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0;
-  transition: opacity var(--transition-fast);
 }
 
 .galleryItem:hover .galleryOverlay {
-  opacity: 1;
+  /* Removed hover effect since items are not clickable */
 }
 
 .galleryOverlay span {
@@ -106,6 +102,7 @@
 }
 
 .viewAllButton {
+  display: block;
   width: 100%;
   padding: var(--spacing-3) var(--spacing-4);
   font-size: var(--font-size-sm);
@@ -116,6 +113,8 @@
   border-radius: var(--radius-lg);
   cursor: pointer;
   transition: all var(--transition-fast);
+  text-align: center;
+  text-decoration: none;
 }
 
 .viewAllButton:hover {

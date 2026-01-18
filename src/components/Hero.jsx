@@ -125,14 +125,20 @@ function Hero() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            <img
-              src={personalInfo.profilePhoto}
-              alt="Jisnoo Dev Pal - Computer Science Student"
-              className={styles.profileImage}
-              loading="eager"
-              width="300"
-              height="300"
-            />
+            <picture>
+              <source
+                srcSet={personalInfo.profilePhoto}
+                type="image/webp"
+              />
+              <img
+                src="/images/profile_photo/jisnoo.png"
+                alt="Jisnoo Dev Pal - Computer Science Student"
+                className={styles.profileImage}
+                loading="eager"
+                width="300"
+                height="300"
+              />
+            </picture>
           </motion.div>
         </motion.div>
 

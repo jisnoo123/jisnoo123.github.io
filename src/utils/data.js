@@ -4,7 +4,7 @@ export const personalInfo = {
   name: "Jisnoo Dev Pal",
   title: "Computer Science Student",
   email: "jisnoodevpal@gmail.com",
-  profilePhoto: "/images/profile_photo/jisnoo.png",
+  profilePhoto: "/images/profile_photo/jisnoo.webp",
   cv: "/CV/two_pg_cv.pdf",
   social: {
     github: "https://github.com/jisnoo123",
@@ -45,7 +45,7 @@ export const projects = [
       "Replaces patches of images or video frames with nearest neighbouring image in the dataset.",
     techInfo: "Datasets: Anime, CIFAR10, SVHN and ImageNet10",
     date: "Jun' 25",
-    image: "/images/projects/collager/collage_teaser.png",
+    image: "/images/projects/collager/collage_teaser.webp",
     links: {
       github: "https://github.com/jisnoo123/collage",
       demo: "https://huggingface.co/spaces/jisnoo/collage_image",

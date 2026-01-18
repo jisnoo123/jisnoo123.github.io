@@ -222,7 +222,8 @@ body.dark-mode .hero-bio {
 .hero-links {
     display: flex;
     gap: 1.5rem;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
     flex-wrap: wrap;
     justify-content: center;
 }

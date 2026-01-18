@@ -1,16 +1,30 @@
 :root {
   /* Colors - Light Mode */
   --color-bg: #ffffff;
-  --color-bg-secondary: #f8f9fa;
+  --color-bg-secondary: #f5f5ff;
   --color-text: #1a1a1a;
-  --color-text-secondary: #6b7280;
-  --color-text-muted: #9ca3af;
-  --color-accent: #3b82f6;
-  --color-accent-hover: #2563eb;
-  --color-border: #e5e7eb;
-  --color-border-light: #f3f4f6;
+  --color-text-secondary: #4a5568;
+  --color-text-muted: #718096;
+  
+  /* Simplified Color Palette - Black and Yellow */
+  --color-accent-primary: #fbbf24;
+  --color-accent-secondary: #f59e0b;
+  
+  /* Main Gradient - Black to Yellow */
+  --gradient-primary: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+  --gradient-secondary: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  
+  /* Shadow colors */
+  --shadow-primary: rgba(251, 191, 36, 0.3);
+  --shadow-primary-hover: rgba(251, 191, 36, 0.4);
+  
+  /* Legacy support */
+  --color-accent: #fbbf24;
+  --color-accent-hover: #f59e0b;
+  --color-border: #e2e8f0;
+  --color-border-light: #f7fafc;
   --color-card-bg: #ffffff;
-  --color-card-shadow: rgba(0, 0, 0, 0.05);
+  --color-card-shadow: rgba(0, 0, 0, 0.08);
   --color-overlay: rgba(0, 0, 0, 0.5);
   
   /* Typography */
@@ -66,16 +80,30 @@
 
 /* Dark Mode */
 [data-theme="dark"] {
-  --color-bg: #0f0f0f;
+  --color-bg: #0a0a0a;
   --color-bg-secondary: #1a1a1a;
-  --color-text: #f5f5f5;
-  --color-text-secondary: #a3a3a3;
-  --color-text-muted: #737373;
-  --color-accent: #60a5fa;
-  --color-accent-hover: #93c5fd;
-  --color-border: #2d2d2d;
-  --color-border-light: #1f1f1f;
-  --color-card-bg: #171717;
-  --color-card-shadow: rgba(0, 0, 0, 0.3);
-  --color-overlay: rgba(0, 0, 0, 0.7);
+  --color-text: #f7fafc;
+  --color-text-secondary: #cbd5e0;
+  --color-text-muted: #a0aec0;
+  
+  /* Simplified Color Palette - Black and Yellow for Dark Mode */
+  --color-accent-primary: #fcd34d;
+  --color-accent-secondary: #fbbf24;
+  
+  /* Main Gradient - Bright Yellow for dark mode */
+  --gradient-primary: linear-gradient(135deg, #fcd34d 0%, #fbbf24 100%);
+  --gradient-secondary: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+  
+  /* Shadow colors */
+  --shadow-primary: rgba(252, 211, 77, 0.3);
+  --shadow-primary-hover: rgba(252, 211, 77, 0.4);
+  
+  /* Legacy support */
+  --color-accent: #fcd34d;
+  --color-accent-hover: #fbbf24;
+  --color-border: #2d3748;
+  --color-border-light: #1a202c;
+  --color-card-bg: #1a1a1a;
+  --color-card-shadow: rgba(0, 0, 0, 0.5);
+  --color-overlay: rgba(0, 0, 0, 0.8);
 }

@@ -223,10 +223,10 @@ export const galleryImages = [
 
 export const navLinks = [
   { id: "hero", label: "Home" },
-  { id: "news", label: "News" },
-  { id: "projects", label: "Projects" },
   { id: "education", label: "Education" },
   { id: "honors", label: "Honors" },
+  { id: "projects", label: "Projects" },
+  { id: "news", label: "News" },
   { id: "specializations", label: "Specializations" },
   { id: "trivia", label: "Trivia" },
 ];

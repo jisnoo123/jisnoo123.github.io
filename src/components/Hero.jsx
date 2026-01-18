@@ -5,7 +5,7 @@ import styles from './Hero.module.css';
 
 function Hero() {
   const scrollToNews = () => {
-    const element = document.getElementById('news');
+    const element = document.getElementById('education');
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
@@ -74,11 +74,19 @@ function Hero() {
             >
               <h2 className={styles.interestsTitle}>Research Interests</h2>
               <div className={styles.interestTags}>
-                {personalInfo.researchInterests.map((interest) => (
-                  <span key={interest} className={styles.tag}>
-                    {interest}
-                  </span>
-                ))}
+                {personalInfo.researchInterests.map((interest, index) => {
+                  // Alternate between primary and secondary gradients
+                  const gradientClass = index % 2 === 0 ? 'primary' : 'secondary';
+                  return (
+                    <span 
+                      key={interest} 
+                      className={styles.tag}
+                      style={{ background: `var(--gradient-${gradientClass})` }}
+                    >
+                      {interest}
+                    </span>
+                  );
+                })}
               </div>
             </motion.div>
 
@@ -88,48 +96,26 @@ function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.5 }}
             >
-              <a
-                href={`mailto:${personalInfo.email}`}
-                className={styles.socialLink}
-                aria-label="Email Jisnoo"
-                title="Email"
-              >
-                <Mail size={20} aria-hidden="true" />
-                <span>Email</span>
-              </a>
-              <a
-                href={personalInfo.social.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.socialLink}
-                aria-label="GitHub Profile"
-                title="GitHub"
-              >
-                <Github size={20} aria-hidden="true" />
-                <span>GitHub</span>
-              </a>
-              <a
-                href={personalInfo.social.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.socialLink}
-                aria-label="LinkedIn Profile"
-                title="LinkedIn"
-              >
-                <Linkedin size={20} aria-hidden="true" />
-                <span>LinkedIn</span>
-              </a>
-              <a
-                href={personalInfo.cv}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.socialLink}
-                aria-label="Download CV"
-                title="CV"
-              >
-                <FileText size={20} aria-hidden="true" />
-                <span>CV</span>
-              </a>
+              {[
+                { href: `mailto:${personalInfo.email}`, icon: Mail, label: 'Email', gradient: 'primary' },
+                { href: personalInfo.social.github, icon: Github, label: 'GitHub', gradient: 'secondary', external: true },
+                { href: personalInfo.social.linkedin, icon: Linkedin, label: 'LinkedIn', gradient: 'primary', external: true },
+                { href: personalInfo.cv, icon: FileText, label: 'CV', gradient: 'secondary', external: true }
+              // eslint-disable-next-line no-unused-vars
+              ].map(({ href, icon: Icon, label, gradient, external }) => (
+                <a
+                  key={label}
+                  href={href}
+                  {...(external && { target: '_blank', rel: 'noopener noreferrer' })}
+                  className={styles.socialLink}
+                  style={{ background: `var(--gradient-${gradient})` }}
+                  aria-label={label === 'Email' ? 'Email Jisnoo' : `${label} Profile`}
+                  title={label}
+                >
+                  <Icon size={20} aria-hidden="true" />
+                  <span>{label}</span>
+                </a>
+              ))}
             </motion.div>
           </div>
 
@@ -162,7 +148,7 @@ function Hero() {
             repeatType: 'reverse',
             repeatDelay: 1,
           }}
-          aria-label="Scroll to News section"
+          aria-label="Scroll to Education section"
         >
           <ChevronDown size={28} aria-hidden="true" />
         </motion.button>

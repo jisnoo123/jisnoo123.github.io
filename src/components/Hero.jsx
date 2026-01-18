@@ -75,8 +75,8 @@ function Hero() {
               <h2 className={styles.interestsTitle}>Research Interests</h2>
               <div className={styles.interestTags}>
                 {personalInfo.researchInterests.map((interest, index) => {
-                  const gradients = ['primary', 'secondary', 'tertiary'];
-                  const gradientClass = gradients[index % gradients.length];
+                  // Alternate between primary and secondary gradients
+                  const gradientClass = index % 2 === 0 ? 'primary' : 'secondary';
                   return (
                     <span 
                       key={interest} 
@@ -99,8 +99,9 @@ function Hero() {
               {[
                 { href: `mailto:${personalInfo.email}`, icon: Mail, label: 'Email', gradient: 'primary' },
                 { href: personalInfo.social.github, icon: Github, label: 'GitHub', gradient: 'secondary', external: true },
-                { href: personalInfo.social.linkedin, icon: Linkedin, label: 'LinkedIn', gradient: 'tertiary', external: true },
-                { href: personalInfo.cv, icon: FileText, label: 'CV', gradient: 'warm', external: true }
+                { href: personalInfo.social.linkedin, icon: Linkedin, label: 'LinkedIn', gradient: 'primary', external: true },
+                { href: personalInfo.cv, icon: FileText, label: 'CV', gradient: 'secondary', external: true }
+              // eslint-disable-next-line no-unused-vars
               ].map(({ href, icon: Icon, label, gradient, external }) => (
                 <a
                   key={label}

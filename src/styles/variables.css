@@ -6,28 +6,21 @@
   --color-text-secondary: #4a5568;
   --color-text-muted: #718096;
   
-  /* Bold Creative Colors - Multiple Accents */
-  --color-accent-primary: #ff6b6b;
-  --color-accent-secondary: #4ecdc4;
-  --color-accent-tertiary: #ffd93d;
-  --color-accent-purple: #a78bfa;
-  --color-accent-orange: #fb923c;
-  --color-accent-pink: #f472b6;
+  /* Simplified Color Palette - Black and Yellow */
+  --color-accent-primary: #fbbf24;
+  --color-accent-secondary: #f59e0b;
   
-  /* Gradients */
-  --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-  --gradient-tertiary: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-  --gradient-warm: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
-  --gradient-cool: linear-gradient(135deg, #30cfd0 0%, #330867 100%);
+  /* Main Gradient - Black to Yellow */
+  --gradient-primary: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+  --gradient-secondary: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
   
   /* Shadow colors */
-  --shadow-primary: rgba(102, 126, 234, 0.3);
-  --shadow-primary-hover: rgba(102, 126, 234, 0.4);
+  --shadow-primary: rgba(251, 191, 36, 0.3);
+  --shadow-primary-hover: rgba(251, 191, 36, 0.4);
   
   /* Legacy support */
-  --color-accent: #667eea;
-  --color-accent-hover: #5a67d8;
+  --color-accent: #fbbf24;
+  --color-accent-hover: #f59e0b;
   --color-border: #e2e8f0;
   --color-border-light: #f7fafc;
   --color-card-bg: #ffffff;
@@ -93,24 +86,21 @@
   --color-text-secondary: #cbd5e0;
   --color-text-muted: #a0aec0;
   
-  /* Bold Creative Colors - Dark Mode Enhanced */
-  --color-accent-primary: #ff8787;
-  --color-accent-secondary: #6ee7de;
-  --color-accent-tertiary: #ffe066;
-  --color-accent-purple: #c4b5fd;
-  --color-accent-orange: #fdba74;
-  --color-accent-pink: #f9a8d4;
+  /* Simplified Color Palette - Black and Yellow for Dark Mode */
+  --color-accent-primary: #fcd34d;
+  --color-accent-secondary: #fbbf24;
   
-  /* Gradients - Brighter for dark mode */
-  --gradient-primary: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
-  --gradient-secondary: linear-gradient(135deg, #ec4899 0%, #f97316 100%);
-  --gradient-tertiary: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);
-  --gradient-warm: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
-  --gradient-cool: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  /* Main Gradient - Bright Yellow for dark mode */
+  --gradient-primary: linear-gradient(135deg, #fcd34d 0%, #fbbf24 100%);
+  --gradient-secondary: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+  
+  /* Shadow colors */
+  --shadow-primary: rgba(252, 211, 77, 0.3);
+  --shadow-primary-hover: rgba(252, 211, 77, 0.4);
   
   /* Legacy support */
-  --color-accent: #8b5cf6;
-  --color-accent-hover: #a78bfa;
+  --color-accent: #fcd34d;
+  --color-accent-hover: #fbbf24;
   --color-border: #2d3748;
   --color-border-light: #1a202c;
   --color-card-bg: #1a1a1a;

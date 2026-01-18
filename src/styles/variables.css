@@ -1,16 +1,33 @@
 :root {
   /* Colors - Light Mode */
   --color-bg: #ffffff;
-  --color-bg-secondary: #f8f9fa;
+  --color-bg-secondary: #fafafa;
   --color-text: #1a1a1a;
-  --color-text-secondary: #6b7280;
-  --color-text-muted: #9ca3af;
-  --color-accent: #3b82f6;
-  --color-accent-hover: #2563eb;
-  --color-border: #e5e7eb;
-  --color-border-light: #f3f4f6;
+  --color-text-secondary: #4a5568;
+  --color-text-muted: #718096;
+  
+  /* Bold Creative Colors - Multiple Accents */
+  --color-accent-primary: #ff6b6b;
+  --color-accent-secondary: #4ecdc4;
+  --color-accent-tertiary: #ffd93d;
+  --color-accent-purple: #a78bfa;
+  --color-accent-orange: #fb923c;
+  --color-accent-pink: #f472b6;
+  
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  --gradient-tertiary: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  --gradient-warm: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+  --gradient-cool: linear-gradient(135deg, #30cfd0 0%, #330867 100%);
+  
+  /* Legacy support */
+  --color-accent: #667eea;
+  --color-accent-hover: #5a67d8;
+  --color-border: #e2e8f0;
+  --color-border-light: #f7fafc;
   --color-card-bg: #ffffff;
-  --color-card-shadow: rgba(0, 0, 0, 0.05);
+  --color-card-shadow: rgba(0, 0, 0, 0.08);
   --color-overlay: rgba(0, 0, 0, 0.5);
   
   /* Typography */
@@ -66,16 +83,33 @@
 
 /* Dark Mode */
 [data-theme="dark"] {
-  --color-bg: #0f0f0f;
+  --color-bg: #0a0a0a;
   --color-bg-secondary: #1a1a1a;
-  --color-text: #f5f5f5;
-  --color-text-secondary: #a3a3a3;
-  --color-text-muted: #737373;
-  --color-accent: #60a5fa;
-  --color-accent-hover: #93c5fd;
-  --color-border: #2d2d2d;
-  --color-border-light: #1f1f1f;
-  --color-card-bg: #171717;
-  --color-card-shadow: rgba(0, 0, 0, 0.3);
-  --color-overlay: rgba(0, 0, 0, 0.7);
+  --color-text: #f7fafc;
+  --color-text-secondary: #cbd5e0;
+  --color-text-muted: #a0aec0;
+  
+  /* Bold Creative Colors - Dark Mode Enhanced */
+  --color-accent-primary: #ff8787;
+  --color-accent-secondary: #6ee7de;
+  --color-accent-tertiary: #ffe066;
+  --color-accent-purple: #c4b5fd;
+  --color-accent-orange: #fdba74;
+  --color-accent-pink: #f9a8d4;
+  
+  /* Gradients - Brighter for dark mode */
+  --gradient-primary: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
+  --gradient-secondary: linear-gradient(135deg, #ec4899 0%, #f97316 100%);
+  --gradient-tertiary: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);
+  --gradient-warm: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+  --gradient-cool: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  
+  /* Legacy support */
+  --color-accent: #8b5cf6;
+  --color-accent-hover: #a78bfa;
+  --color-border: #2d3748;
+  --color-border-light: #1a202c;
+  --color-card-bg: #1a1a1a;
+  --color-card-shadow: rgba(0, 0, 0, 0.5);
+  --color-overlay: rgba(0, 0, 0, 0.8);
 }

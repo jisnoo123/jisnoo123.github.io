@@ -5,7 +5,7 @@ import styles from './Hero.module.css';
 
 function Hero() {
   const scrollToNews = () => {
-    const element = document.getElementById('news');
+    const element = document.getElementById('education');
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
@@ -162,7 +162,7 @@ function Hero() {
             repeatType: 'reverse',
             repeatDelay: 1,
           }}
-          aria-label="Scroll to News section"
+          aria-label="Scroll to Education section"
         >
           <ChevronDown size={28} aria-hidden="true" />
         </motion.button>

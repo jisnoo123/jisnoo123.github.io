@@ -200,14 +200,6 @@ body.dark-mode .hero-bio {
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.hero-bio .bio-lead {
-    font-size: 1.15rem;
-    font-weight: 500;
-    color: var(--text-primary);
-    margin-bottom: 1.25rem;
-    line-height: 1.7;
-}
-
 .hero-bio p {
     font-size: 1rem;
     line-height: 1.8;
@@ -674,5 +666,151 @@ body.dark-mode .hero-link {
 
     .container {
         padding: 0 16px;
+    }
+}
+
+/* New Styles for Updated Sections */
+
+/* Project List (Row Layout) */
+.project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.project-row {
+    padding: 1.5rem;
+    background: var(--card-bg);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 8px var(--shadow);
+    transition: all 0.3s ease;
+}
+
+.project-row:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px var(--shadow-lg);
+}
+
+.project-row h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: var(--text-primary);
+}
+
+.project-row p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+/* Education Compact Style */
+.education-item-compact {
+    margin-bottom: 1.5rem;
+    padding: 1.25rem 1.5rem;
+    background: var(--card-bg);
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-color);
+    box-shadow: 0 2px 8px var(--shadow);
+    transition: all 0.3s ease;
+}
+
+.education-item-compact:hover {
+    transform: translateX(4px);
+    box-shadow: 0 4px 16px var(--shadow-lg);
+}
+
+.education-item-compact p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+}
+
+.education-item-compact p:last-child {
+    margin-bottom: 0;
+}
+
+.education-item-compact strong {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+/* Honors List (Row Layout) */
+.honors-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.honor-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: var(--card-bg);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 8px var(--shadow);
+    transition: all 0.3s ease;
+}
+
+.honor-row:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px var(--shadow-lg);
+}
+
+.honor-row p {
+    flex: 1;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin: 0;
+}
+
+.certificate-link {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-radius: 6px;
+}
+
+.certificate-link:hover {
+    color: var(--secondary-color);
+    background: var(--surface);
+    transform: scale(1.1);
+}
+
+.certificate-link svg {
+    flex-shrink: 0;
+}
+
+/* Hobbies Simple Text */
+#trivia .content-box p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    text-align: center;
+    padding: 1.5rem;
+    background: var(--card-bg);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 8px var(--shadow);
+}
+
+@media (max-width: 768px) {
+    .honor-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+    
+    .certificate-link {
+        align-self: flex-end;
     }
 }

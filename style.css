@@ -593,71 +593,352 @@ body.dark-mode .hero-link {
     opacity: 0.8;
 }
 
-/* Responsive Design */
+/* Responsive Design - Mobile & Tablet Optimization */
+
+/* Tablet (Portrait & Landscape) - 768px to 1024px */
+@media (max-width: 1024px) {
+    .container {
+        max-width: 100%;
+        padding: 0 32px;
+    }
+    
+    .section {
+        padding: 5rem 0;
+    }
+    
+    .hero {
+        padding: 4rem 0 5rem;
+    }
+    
+    .hero-bio {
+        max-width: 90%;
+        padding: 1.5rem;
+    }
+}
+
+/* Tablet & Mobile - 768px and below */
 @media (max-width: 768px) {
+    /* Container adjustments */
+    .container {
+        padding: 0 24px;
+    }
+    
+    /* Navigation */
     .nav-menu {
-        gap: 1rem;
+        gap: 1.2rem;
         font-size: 0.85rem;
+        flex-wrap: wrap;
+    }
+    
+    .theme-toggle {
+        width: 36px;
+        height: 36px;
+    }
+    
+    /* Hero Section */
+    .hero {
+        padding: 3.5rem 0 4.5rem;
     }
 
     .hero h1 {
-        font-size: 2rem;
+        font-size: 2.25rem;
+        letter-spacing: -0.5px;
     }
 
     .hero .subtitle {
-        font-size: 1rem;
+        font-size: 1.05rem;
+        margin-bottom: 1.5rem;
     }
-
-    .hero .bio-short {
-        font-size: 0.9rem;
-    }
-
-    .section {
-        padding: 3.5rem 0;
-    }
-
-    .section h2 {
-        font-size: 1.85rem;
-    }
-
+    
     .profile-photo {
-        width: 130px;
-        height: 130px;
+        width: 140px;
+        height: 140px;
     }
-
+    
+    .hero-bio {
+        max-width: 100%;
+        padding: 1.5rem;
+        margin: 1.5rem 0;
+    }
+    
+    .hero-bio p {
+        font-size: 0.95rem;
+    }
+    
     .hero-links {
         gap: 1rem;
     }
 
     .hero-link {
+        padding: 0.55rem 1.1rem;
+        font-size: 0.85rem;
+    }
+    
+    /* Sections */
+    .section {
+        padding: 4.5rem 0;
+    }
+
+    .section h2 {
+        font-size: 2rem;
+        margin-bottom: 2.5rem;
+    }
+    
+    /* Projects */
+    .project-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .project-row {
+        margin-bottom: 2rem;
+    }
+    
+    .project-row h3 {
+        font-size: 1.2rem;
+    }
+    
+    .project-links {
+        gap: 0.75rem;
+    }
+    
+    /* Education */
+    .education-item-compact {
+        margin-bottom: 2rem;
+    }
+    
+    /* Honors */
+    .honors-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .honor-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+    
+    .certificate-link {
+        align-self: flex-end;
+    }
+    
+    /* Trivia */
+    .trivia-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+    }
+}
+
+/* Mobile - 480px and below */
+@media (max-width: 480px) {
+    /* Container */
+    .container {
+        padding: 0 16px;
+    }
+    
+    /* Navigation - Stacked Layout */
+    .navbar {
+        padding: 0.75rem 0;
+    }
+    
+    .navbar .container {
+        flex-direction: column;
+        gap: 0.75rem;
+        align-items: stretch;
+    }
+    
+    .nav-brand {
+        text-align: center;
+        font-size: 1.15rem;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+        width: 100%;
+        padding: 0.5rem 0;
+    }
+    
+    .nav-menu li {
+        width: 100%;
+    }
+    
+    .nav-menu a {
+        display: block;
+        padding: 0.5rem;
+    }
+
+    .theme-toggle {
+        position: absolute;
+        top: 0.75rem;
+        right: 16px;
+        margin-left: 0;
+    }
+    
+    /* Hero Section */
+    .hero {
+        padding: 3rem 0 3.5rem;
+    }
+
+    .hero h1 {
+        font-size: 1.85rem;
+    }
+
+    .hero .subtitle {
+        font-size: 0.95rem;
+    }
+    
+    .profile-photo {
+        width: 120px;
+        height: 120px;
+        border-width: 3px;
+    }
+    
+    .hero-bio {
+        padding: 1.25rem;
+        border-radius: 10px;
+    }
+    
+    .hero-bio p {
+        font-size: 0.9rem;
+        line-height: 1.7;
+    }
+    
+    .hero-links {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.75rem;
+    }
+    
+    .hero-link {
+        width: 100%;
+        justify-content: center;
+        padding: 0.65rem 1rem;
+    }
+    
+    /* Sections */
+    .section {
+        padding: 3.5rem 0;
+    }
+    
+    .section h2 {
+        font-size: 1.75rem;
+        margin-bottom: 2rem;
+    }
+    
+    /* News */
+    .news-item {
+        margin-bottom: 1.5rem;
+    }
+    
+    .news-date {
+        font-size: 0.8rem;
+    }
+    
+    /* Projects */
+    .project-row {
+        margin-bottom: 2rem;
+    }
+    
+    .project-row h3 {
+        font-size: 1.15rem;
+    }
+    
+    .project-row p {
+        font-size: 0.9rem;
+    }
+    
+    .project-links {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .project-link-icon {
+        justify-content: center;
         padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+    }
+    
+    /* Education */
+    .education-item-compact {
+        margin-bottom: 1.75rem;
+    }
+    
+    .education-item-compact p {
+        font-size: 0.9rem;
+    }
+    
+    /* Honors */
+    .honors-list {
+        gap: 1.25rem;
+    }
+    
+    .honor-row {
+        gap: 0.5rem;
+    }
+    
+    .honor-row p {
+        font-size: 0.9rem;
+    }
+    
+    .certificate-link {
+        padding: 0.4rem;
+    }
+    
+    .certificate-link svg {
+        width: 16px;
+        height: 16px;
+    }
+    
+    /* Hobbies */
+    #trivia .content-box p {
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+    
+    /* Trivia Grid (if used) */
+    .trivia-grid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+    
+    .trivia-item {
+        padding: 1.5rem 1.25rem;
+    }
+    
+    /* Footer */
+    .footer {
+        padding: 2rem 0;
+    }
+    
+    .footer p {
         font-size: 0.85rem;
     }
 }
 
-@media (max-width: 480px) {
-    .navbar .container {
-        flex-wrap: wrap;
-        gap: 1rem;
-    }
-
-    .nav-menu {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 0.75rem;
-    }
-
-    .theme-toggle {
-        order: -1;
-        margin-left: auto;
-    }
-
-    .hero {
-        padding: 3.5rem 0 4rem;
-    }
-
+/* Extra Small Mobile - 360px and below */
+@media (max-width: 360px) {
     .container {
-        padding: 0 16px;
+        padding: 0 12px;
+    }
+    
+    .hero h1 {
+        font-size: 1.65rem;
+    }
+    
+    .profile-photo {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .section h2 {
+        font-size: 1.5rem;
+    }
+    
+    .hero-bio {
+        padding: 1rem;
     }
 }
 

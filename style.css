@@ -500,6 +500,58 @@ body.dark-mode .hero-link {
     gap: 0.5rem;
 }
 
+.project-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.project-link-icon {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    background: var(--surface);
+    transition: all 0.3s ease;
+}
+
+.project-link-icon:hover {
+    background: var(--primary-color);
+    color: #000;
+    transform: translateY(-2px);
+}
+
+.project-link-icon svg {
+    flex-shrink: 0;
+}
+
+.certificate-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 1rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.certificate-icon:hover {
+    color: var(--secondary-color);
+    transform: scale(1.1);
+}
+
+.honor-item {
+    text-align: center;
+}
+
 /* Trivia Grid */
 .trivia-grid {
     display: grid;

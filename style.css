@@ -275,7 +275,7 @@ body.dark-mode .hero-link {
     position: absolute;
     bottom: -12px;
     left: 0;
-    width: 60px;
+    width: 100%;
     height: 4px;
     background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
     border-radius: 2px;

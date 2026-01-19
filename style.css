@@ -264,7 +264,7 @@ body.dark-mode .hero-link {
     font-size: 2.25rem;
     font-weight: 700;
     margin-bottom: 3rem;
-    text-align: center;
+    text-align: left;
     letter-spacing: -0.5px;
     position: relative;
     color: var(--text-primary);
@@ -274,8 +274,7 @@ body.dark-mode .hero-link {
     content: '';
     position: absolute;
     bottom: -12px;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
     width: 60px;
     height: 4px;
     background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
@@ -283,8 +282,7 @@ body.dark-mode .hero-link {
 }
 
 .content-box {
-    max-width: 800px;
-    margin: 0 auto;
+    width: 100%;
 }
 
 /* Education Section */

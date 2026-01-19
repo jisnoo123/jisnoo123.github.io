@@ -257,7 +257,7 @@ body.dark-mode .hero-link {
 }
 
 .section-alt {
-    background-color: var(--surface);
+    background-color: var(--background);
 }
 
 .section h2 {
@@ -328,18 +328,6 @@ body.dark-mode .hero-link {
 /* News Section */
 .news-item {
     margin-bottom: 2rem;
-    padding: 1.5rem;
-    padding-left: 1.5rem;
-    border-left: 4px solid var(--secondary-color);
-    background: var(--card-bg);
-    border-radius: 0 8px 8px 0;
-    box-shadow: 0 2px 8px var(--shadow);
-    transition: all 0.3s ease;
-}
-
-.news-item:hover {
-    transform: translateX(4px);
-    box-shadow: 0 4px 16px var(--shadow-lg);
 }
 
 .news-date {
@@ -677,17 +665,7 @@ body.dark-mode .hero-link {
 }
 
 .project-row {
-    padding: 1.5rem;
-    background: var(--card-bg);
-    border-radius: 12px;
-    border: 1px solid var(--border-color);
-    box-shadow: 0 2px 8px var(--shadow);
-    transition: all 0.3s ease;
-}
-
-.project-row:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 24px var(--shadow-lg);
+    margin-bottom: 1rem;
 }
 
 .project-row h3 {
@@ -706,17 +684,6 @@ body.dark-mode .hero-link {
 /* Education Compact Style */
 .education-item-compact {
     margin-bottom: 1.5rem;
-    padding: 1.25rem 1.5rem;
-    background: var(--card-bg);
-    border-radius: 8px;
-    border-left: 4px solid var(--primary-color);
-    box-shadow: 0 2px 8px var(--shadow);
-    transition: all 0.3s ease;
-}
-
-.education-item-compact:hover {
-    transform: translateX(4px);
-    box-shadow: 0 4px 16px var(--shadow-lg);
 }
 
 .education-item-compact p {
@@ -746,17 +713,6 @@ body.dark-mode .hero-link {
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
-    padding: 1.25rem 1.5rem;
-    background: var(--card-bg);
-    border-radius: 8px;
-    border: 1px solid var(--border-color);
-    box-shadow: 0 2px 8px var(--shadow);
-    transition: all 0.3s ease;
-}
-
-.honor-row:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px var(--shadow-lg);
 }
 
 .honor-row p {
@@ -793,11 +749,7 @@ body.dark-mode .hero-link {
     font-size: 1.05rem;
     line-height: 1.8;
     color: var(--text-secondary);
-    text-align: center;
-    padding: 1.5rem;
-    background: var(--card-bg);
-    border-radius: 8px;
-    border: 1px solid var(--border-color);
+}
     box-shadow: 0 2px 8px var(--shadow);
 }
 

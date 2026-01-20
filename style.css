@@ -574,7 +574,7 @@ body.dark-mode .hero-link {
     background-color: var(--navbar-bg);
     color: var(--navbar-text);
     text-align: center;
-    padding: 2.5rem 0;
+    padding: 1rem 0;
     border-top: 1px solid var(--border-color);
 }
 

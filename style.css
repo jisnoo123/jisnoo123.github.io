@@ -253,7 +253,7 @@ body.dark-mode .hero-link {
 
 /* Sections */
 .section {
-    padding: 6rem 0;
+    padding: 7.5rem 0;
 }
 
 .section-alt {
@@ -749,7 +749,7 @@ body.dark-mode .hero-link {
     }
     
     .nav-brand {
-        text-align: center;
+        text-align: left;
         font-size: 1.15rem;
     }
 

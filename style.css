@@ -85,6 +85,12 @@ html {
     font-size: 1.25rem;
     font-weight: 700;
     letter-spacing: -0.5px;
+    text-decoration: none;
+}
+
+.nav-brand:hover {
+    color: var(--primary-color);
+    text-decoration: none;
 }
 
 .nav-menu a:hover {

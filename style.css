@@ -64,15 +64,9 @@ html {
     padding: 0 24px;
 }
 
-/* Navigation */
+/* Navigation - Hidden */
 .navbar {
-    background-color: var(--navbar-bg);
-    padding: 1rem 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 1px 3px var(--shadow);
-    border-bottom: 1px solid var(--border-color);
+    display: none;
 }
 
 .navbar .container {
@@ -253,7 +247,7 @@ body.dark-mode .hero-link {
 
 /* Sections */
 .section {
-    padding: 7.5rem 0;
+    padding: 9rem 0;
 }
 
 .section-alt {

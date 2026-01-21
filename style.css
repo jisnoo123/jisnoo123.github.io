@@ -931,6 +931,25 @@ body.dark-mode .hero-link {
     font-size: 1.2rem;
 }
 
+.project-guidance {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    font-style: italic;
+    margin-top: 0.5rem;
+}
+
+.project-guidance a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.project-guidance a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
 /* Education Compact Style */
 .education-item-compact {
     margin-bottom: 1.5rem;

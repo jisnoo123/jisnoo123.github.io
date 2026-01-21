@@ -190,7 +190,7 @@ body.dark-mode .hero-bio {
 }
 
 .hero-bio p {
-    font-size: 1rem;
+    font-size: 1.25rem;
     line-height: 1.8;
     color: var(--text-secondary);
     margin-bottom: 1rem;
@@ -1008,10 +1008,121 @@ body.dark-mode .hero-link {
     line-height: 1.8;
     color: var(--text-secondary);
 }
-    box-shadow: 0 2px 8px var(--shadow);
+
+/* Specializations Section */
+.specialization-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.specialization-item {
+    margin-bottom: 1rem;
+}
+
+.specialization-item:last-child {
+    margin-bottom: 0;
+}
+
+.specialization-item h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: var(--text-primary);
+}
+
+.specialization-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.cert-link {
+    font-size: 0.85rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    padding: 0.25rem 0.75rem;
+    border: 1.5px solid var(--primary-color);
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    margin-left: 0.5rem;
+}
+
+.cert-link:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 168, 0, 0.3);
+}
+
+.specialization-org {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.org-icon {
+    color: var(--primary-color);
+    flex-shrink: 0;
+}
+
+.org-label {
+    font-weight: 500;
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+}
+
+.org-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.org-link:hover {
+    color: var(--primary-color);
+}
+
+.org-separator {
+    color: var(--text-secondary);
+    margin: 0 0.2rem;
+}
+
+.coursera-icon,
+.deeplearning-icon {
+    flex-shrink: 0;
+    color: var(--primary-color);
+}
+
+.issue-date {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--text-secondary);
+    font-size: 1rem;
+    font-style: italic;
+}
+
+.calendar-icon {
+    flex-shrink: 0;
+    color: var(--primary-color);
 }
 
 @media (max-width: 768px) {
+    .specialization-org {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    
     .honor-row {
         flex-direction: column;
         align-items: flex-start;

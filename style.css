@@ -1065,6 +1065,11 @@ body.dark-mode .hero-link {
     color: var(--primary-color);
 }
 
+.org-separator {
+    color: var(--text-secondary);
+    margin: 0 0.2rem;
+}
+
 .coursera-icon,
 .deeplearning-icon {
     flex-shrink: 0;
@@ -1083,11 +1088,7 @@ body.dark-mode .hero-link {
         align-items: flex-start;
         gap: 0.5rem;
     }
-}
-    box-shadow: 0 2px 8px var(--shadow);
-}
-
-@media (max-width: 768px) {
+    
     .honor-row {
         flex-direction: column;
         align-items: flex-start;

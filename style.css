@@ -1077,9 +1077,17 @@ body.dark-mode .hero-link {
 }
 
 .issue-date {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
     color: var(--text-secondary);
     font-size: 1rem;
     font-style: italic;
+}
+
+.calendar-icon {
+    flex-shrink: 0;
+    color: var(--primary-color);
 }
 
 @media (max-width: 768px) {

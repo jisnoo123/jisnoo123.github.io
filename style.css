@@ -338,6 +338,7 @@ body.dark-mode .hero-link {
 .news-item p {
     color: var(--text-secondary);
     line-height: 1.7;
+    font-size: 1.2rem;
 }
 
 /* Honors Grid */
@@ -573,12 +574,12 @@ body.dark-mode .hero-link {
     background-color: var(--navbar-bg);
     color: var(--navbar-text);
     text-align: center;
-    padding: 2.5rem 0;
+    padding: 1rem 0;
     border-top: 1px solid var(--border-color);
 }
 
 .footer p {
-    font-size: 0.9rem;
+    font-size: 1.25rem;
     opacity: 0.8;
 }
 
@@ -928,6 +929,7 @@ body.dark-mode .hero-link {
     color: var(--text-secondary);
     line-height: 1.7;
     margin-bottom: 1rem;
+    font-size: 1.2rem;
 }
 
 /* Education Compact Style */
@@ -943,6 +945,7 @@ body.dark-mode .hero-link {
     color: var(--text-secondary);
     line-height: 1.6;
     margin-bottom: 0.5rem;
+    font-size: 1.2rem;
 }
 
 .education-item-compact p:last-child {
@@ -952,6 +955,7 @@ body.dark-mode .hero-link {
 .education-item-compact strong {
     color: var(--text-primary);
     font-weight: 600;
+    font-size: 1.4rem;
 }
 
 /* Honors List (Row Layout) */
@@ -973,6 +977,7 @@ body.dark-mode .hero-link {
     color: var(--text-secondary);
     line-height: 1.7;
     margin: 0;
+    font-size: 1.2rem;
 }
 
 .certificate-link {
@@ -999,7 +1004,7 @@ body.dark-mode .hero-link {
 
 /* Hobbies Simple Text */
 #trivia .content-box p {
-    font-size: 1.05rem;
+    font-size: 1.25rem;
     line-height: 1.8;
     color: var(--text-secondary);
 }

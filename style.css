@@ -1038,6 +1038,25 @@ body.dark-mode .hero-link {
     margin-bottom: 0.75rem;
 }
 
+.cert-link {
+    font-size: 0.85rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    padding: 0.25rem 0.75rem;
+    border: 1.5px solid var(--primary-color);
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    margin-left: 0.5rem;
+}
+
+.cert-link:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 168, 0, 0.3);
+}
+
 .specialization-org {
     display: flex;
     align-items: center;

@@ -242,7 +242,7 @@ body.dark-mode .hero-link {
 
 /* Sections */
 .section {
-    padding: 4rem 0 6rem 0;
+    padding: 10rem 0 10rem 0;
 }
 
 .section-alt {
@@ -575,7 +575,6 @@ body.dark-mode .hero-link {
     color: var(--navbar-text);
     text-align: center;
     padding: 1rem 0;
-    border-top: 1px solid var(--border-color);
 }
 
 .footer p {

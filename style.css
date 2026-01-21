@@ -1042,7 +1042,7 @@ body.dark-mode .hero-link {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 0.4rem;
+    padding: 0.1rem;
     color: var(--primary-color);
     text-decoration: none;
     transition: all 0.3s ease;

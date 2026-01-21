@@ -242,7 +242,7 @@ body.dark-mode .hero-link {
 
 /* Sections */
 .section {
-    padding: 9rem 0;
+    padding: 2rem 0 4rem 0;
 }
 
 .section-alt {
@@ -252,7 +252,7 @@ body.dark-mode .hero-link {
 .section h2 {
     font-size: 2.25rem;
     font-weight: 700;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
     text-align: left;
     letter-spacing: -0.5px;
     position: relative;
@@ -593,7 +593,7 @@ body.dark-mode .hero-link {
     }
     
     .section {
-        padding: 5rem 0;
+        padding: 2rem 0 3.5rem 0;
     }
     
     .hero {
@@ -660,12 +660,12 @@ body.dark-mode .hero-link {
     
     /* Sections */
     .section {
-        padding: 4.5rem 0;
+        padding: 1.5rem 0 3rem 0;
     }
 
     .section h2 {
         font-size: 2rem;
-        margin-bottom: 2.5rem;
+        margin-bottom: 0.875rem;
     }
     
     /* Projects */
@@ -779,12 +779,12 @@ body.dark-mode .hero-link {
     
     /* Sections */
     .section {
-        padding: 3.5rem 0;
+        padding: 1.25rem 0 2.5rem 0;
     }
     
     .section h2 {
         font-size: 1.75rem;
-        margin-bottom: 2rem;
+        margin-bottom: 0.75rem;
     }
     
     /* News */

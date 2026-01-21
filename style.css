@@ -190,7 +190,7 @@ body.dark-mode .hero-bio {
 }
 
 .hero-bio p {
-    font-size: 1rem;
+    font-size: 1.25rem;
     line-height: 1.8;
     color: var(--text-secondary);
     margin-bottom: 1rem;
@@ -1007,6 +1007,82 @@ body.dark-mode .hero-link {
     font-size: 1.25rem;
     line-height: 1.8;
     color: var(--text-secondary);
+}
+
+/* Specializations Section */
+.specialization-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.specialization-item {
+    margin-bottom: 1rem;
+}
+
+.specialization-item:last-child {
+    margin-bottom: 0;
+}
+
+.specialization-item h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: var(--text-primary);
+}
+
+.specialization-org {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.org-icon {
+    color: var(--primary-color);
+    flex-shrink: 0;
+}
+
+.org-label {
+    font-weight: 500;
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+}
+
+.org-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.org-link:hover {
+    color: var(--primary-color);
+}
+
+.coursera-icon,
+.deeplearning-icon {
+    flex-shrink: 0;
+    color: var(--primary-color);
+}
+
+.issue-date {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .specialization-org {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
 }
     box-shadow: 0 2px 8px var(--shadow);
 }

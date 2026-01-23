@@ -318,7 +318,7 @@ body.dark-mode .hero-link {
 
 /* News Section */
 #news {
-    padding-top: 9rem;
+    padding-top: 4.5rem;
 }
 
 .news-item {
@@ -600,7 +600,7 @@ body.dark-mode .hero-link {
     }
     
     #news {
-        padding-top: 6rem;
+        padding-top: 3rem;
     }
     
     .hero {
@@ -671,7 +671,7 @@ body.dark-mode .hero-link {
     }
 
     #news {
-        padding-top: 5rem;
+        padding-top: 2.5rem;
     }
 
     .section h2 {
@@ -794,7 +794,7 @@ body.dark-mode .hero-link {
     }
     
     #news {
-        padding-top: 4rem;
+        padding-top: 2rem;
     }
     
     .section h2 {

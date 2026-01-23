@@ -914,7 +914,7 @@ body.dark-mode .hero-link {
 }
 
 .project-row:last-child {
-    margin-bottom: 0;
+    margin-bottom: 3rem;
 }
 
 .project-row h3 {
@@ -956,7 +956,7 @@ body.dark-mode .hero-link {
 }
 
 .education-item-compact:last-child {
-    margin-bottom: 0;
+    margin-bottom: 3rem;
 }
 
 .education-item-compact p {
@@ -996,6 +996,10 @@ body.dark-mode .hero-link {
     line-height: 1.7;
     margin: 0;
     font-size: 1.2rem;
+}
+
+.honor-row:last-child {
+    margin-bottom: 3rem;
 }
 
 .certificate-link {

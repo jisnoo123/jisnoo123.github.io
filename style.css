@@ -1114,6 +1114,10 @@ body.dark-mode .hero-link {
     font-size: 1.1rem;
 }
 
+.org-links {
+    display: inline;
+}
+
 .org-link {
     display: inline-flex;
     align-items: center;

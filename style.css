@@ -697,6 +697,16 @@ body.dark-mode .hero-link {
         gap: 0.75rem;
     }
     
+    /* Project Content with Image - Responsive */
+    .project-content-with-image {
+        flex-direction: column;
+    }
+    
+    .project-image {
+        width: 100%;
+        max-width: 400px;
+    }
+    
     /* Education */
     .education-item-compact {
         margin-bottom: 2rem;
@@ -964,6 +974,36 @@ body.dark-mode .hero-link {
 .project-guidance a:hover {
     color: var(--secondary-color);
     text-decoration: underline;
+}
+
+/* Project Content with Image */
+.project-content-with-image {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.project-text {
+    flex: 1;
+}
+
+.project-image {
+    flex-shrink: 0;
+    width: 300px;
+}
+
+.project-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 2px solid var(--border-color);
+    box-shadow: 0 4px 12px var(--shadow);
+    transition: all 0.3s ease;
+}
+
+.project-image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 24px var(--shadow-lg);
 }
 
 /* Education Compact Style */

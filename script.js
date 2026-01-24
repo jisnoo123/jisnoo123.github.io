@@ -3,11 +3,31 @@ document.addEventListener('DOMContentLoaded', function() {
     const themeToggle = document.getElementById('themeToggle');
     const body = document.body;
     
+    // Function to swap icons based on theme
+    function swapIcons(isDarkMode) {
+        const icons = document.querySelectorAll('img[src*="files/images/logos/"]');
+        icons.forEach(icon => {
+            const src = icon.getAttribute('src');
+            if (isDarkMode) {
+                // Switch to dark mode icons (add -dark suffix before .png)
+                if (!src.includes('-dark.png')) {
+                    icon.setAttribute('src', src.replace('.png', '-dark.png'));
+                }
+            } else {
+                // Switch back to light mode icons (remove -dark suffix)
+                if (src.includes('-dark.png')) {
+                    icon.setAttribute('src', src.replace('-dark.png', '.png'));
+                }
+            }
+        });
+    }
+    
     // Check for saved theme preference or default to light mode
     const currentTheme = localStorage.getItem('theme') || 'light';
     
     if (currentTheme === 'dark') {
         body.classList.add('dark-mode');
+        swapIcons(true);
     }
     
     // Toggle theme
@@ -17,6 +37,9 @@ document.addEventListener('DOMContentLoaded', function() {
         // Save theme preference
         const theme = body.classList.contains('dark-mode') ? 'dark' : 'light';
         localStorage.setItem('theme', theme);
+        
+        // Swap icons
+        swapIcons(theme === 'dark');
     });
     
     // Smooth scroll for navigation links

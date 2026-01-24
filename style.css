@@ -262,7 +262,7 @@ body.dark-mode .hero-link {
 
 /* Sections */
 .section {
-    padding: 6rem 0 6rem 0;
+    padding: 6rem 0 8rem 0;
     position: relative;
 }
 
@@ -628,7 +628,7 @@ body.dark-mode .hero-link {
     }
     
     .section {
-        padding: 3rem 0 3rem 0;
+        padding: 3rem 0 4.5rem 0;
     }
     
     #news {
@@ -699,7 +699,7 @@ body.dark-mode .hero-link {
     
     /* Sections */
     .section {
-        padding: 2.5rem 0 2.5rem 0;
+        padding: 2.5rem 0 4rem 0;
     }
 
     #news {
@@ -832,7 +832,7 @@ body.dark-mode .hero-link {
     
     /* Sections */
     .section {
-        padding: 2rem 0 2rem 0;
+        padding: 2rem 0 3.5rem 0;
     }
     
     #news {

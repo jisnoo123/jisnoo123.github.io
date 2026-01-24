@@ -1232,12 +1232,15 @@ body.dark-mode .specialization-item:hover {
     font-size: 0.85rem;
     color: var(--primary-color);
     text-decoration: none;
-    padding: 0.25rem 0.75rem;
+    padding: 0.25rem 0.5rem;
     border: 1.5px solid var(--primary-color);
     border-radius: 6px;
     transition: all 0.3s ease;
     font-weight: 500;
     margin-left: 0.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .cert-link:hover {
@@ -1245,6 +1248,10 @@ body.dark-mode .specialization-item:hover {
     color: white;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(255, 168, 0, 0.3);
+}
+
+.cert-link img {
+    display: block;
 }
 
 .specialization-org {

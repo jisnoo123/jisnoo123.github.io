@@ -306,6 +306,9 @@ body.dark-mode .hero-link {
     border: 1px solid var(--border-color);
     box-shadow: 0 2px 8px var(--shadow);
     transition: all 0.3s ease;
+}
+
+.section .content-box {
     margin-bottom: 4rem;
 }
 

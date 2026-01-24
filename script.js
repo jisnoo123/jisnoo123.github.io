@@ -3,20 +3,22 @@ document.addEventListener('DOMContentLoaded', function() {
     const themeToggle = document.getElementById('themeToggle');
     const body = document.body;
     
+    // Cache icon elements for better performance
+    const logoIcons = document.querySelectorAll('img[src*="files/images/logos/"]');
+    
     // Function to swap icons based on theme
     function swapIcons(isDarkMode) {
-        const icons = document.querySelectorAll('img[src*="files/images/logos/"]');
-        icons.forEach(icon => {
+        logoIcons.forEach(icon => {
             const src = icon.getAttribute('src');
             if (isDarkMode) {
                 // Switch to dark mode icons (add -dark suffix before .png)
                 if (!src.includes('-dark.png')) {
-                    icon.setAttribute('src', src.replace('.png', '-dark.png'));
+                    icon.setAttribute('src', src.replace(/\.png$/, '-dark.png'));
                 }
             } else {
                 // Switch back to light mode icons (remove -dark suffix)
                 if (src.includes('-dark.png')) {
-                    icon.setAttribute('src', src.replace('-dark.png', '.png'));
+                    icon.setAttribute('src', src.replace(/-dark\.png$/, '.png'));
                 }
             }
         });

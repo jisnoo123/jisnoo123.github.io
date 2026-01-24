@@ -308,6 +308,10 @@ body.dark-mode .hero-link {
     transition: all 0.3s ease;
 }
 
+.section .content-box {
+    margin-bottom: 4rem;
+}
+
 /* Education Section */
 .education-item {
     margin-bottom: 2.5rem;
@@ -990,7 +994,7 @@ body.dark-mode .project-row:hover {
 }
 
 .project-row:last-child {
-    margin-bottom: 3rem;
+    margin-bottom: 0;
 }
 
 .project-row h3 {
@@ -1081,7 +1085,7 @@ body.dark-mode .education-item-compact:hover {
 }
 
 .education-item-compact:last-child {
-    margin-bottom: 3rem;
+    margin-bottom: 0;
 }
 
 .education-item-compact p {
@@ -1142,7 +1146,7 @@ body.dark-mode .honor-row:hover {
 }
 
 .honor-row:last-child {
-    margin-bottom: 3rem;
+    margin-bottom: 0;
 }
 
 .certificate-link {

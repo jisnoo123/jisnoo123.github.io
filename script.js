@@ -24,24 +24,49 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Check for saved theme preference or default to light mode
-    const currentTheme = localStorage.getItem('theme') || 'light';
+    // Cache media query for system theme preference
+    const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
     
-    if (currentTheme === 'dark') {
-        body.classList.add('dark-mode');
-        swapIcons(true);
+    // Function to get system theme preference
+    function getSystemTheme() {
+        return darkModeMediaQuery.matches ? 'dark' : 'light';
     }
+    
+    // Function to apply theme
+    function applyTheme(theme) {
+        if (theme === 'dark') {
+            body.classList.add('dark-mode');
+            swapIcons(true);
+        } else {
+            body.classList.remove('dark-mode');
+            swapIcons(false);
+        }
+    }
+    
+    // Check for saved theme preference or use system preference
+    const savedTheme = localStorage.getItem('theme');
+    const currentTheme = savedTheme || getSystemTheme();
+    applyTheme(currentTheme);
+    
+    // Listen for system theme changes (only if user hasn't manually set a preference)
+    darkModeMediaQuery.addEventListener('change', (e) => {
+        // Only auto-switch if user hasn't manually set a theme preference
+        if (!localStorage.getItem('theme')) {
+            const newTheme = e.matches ? 'dark' : 'light';
+            applyTheme(newTheme);
+        }
+    });
     
     // Toggle theme
     themeToggle.addEventListener('click', function() {
-        body.classList.toggle('dark-mode');
+        // Determine new theme (opposite of current)
+        const newTheme = body.classList.contains('dark-mode') ? 'light' : 'dark';
+        
+        // Apply the new theme
+        applyTheme(newTheme);
         
         // Save theme preference
-        const theme = body.classList.contains('dark-mode') ? 'dark' : 'light';
-        localStorage.setItem('theme', theme);
-        
-        // Swap icons
-        swapIcons(theme === 'dark');
+        localStorage.setItem('theme', newTheme);
     });
     
     // Smooth scroll for navigation links

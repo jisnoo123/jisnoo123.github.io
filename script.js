@@ -24,13 +24,34 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Check for saved theme preference or default to light mode
-    const currentTheme = localStorage.getItem('theme') || 'light';
+    // Function to get system theme preference
+    function getSystemTheme() {
+        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    
+    // Check for saved theme preference or use system preference
+    const savedTheme = localStorage.getItem('theme');
+    const currentTheme = savedTheme || getSystemTheme();
     
     if (currentTheme === 'dark') {
         body.classList.add('dark-mode');
         swapIcons(true);
     }
+    
+    // Listen for system theme changes (only if user hasn't manually set a preference)
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+        // Only auto-switch if user hasn't manually set a theme preference
+        if (!localStorage.getItem('theme')) {
+            const newTheme = e.matches ? 'dark' : 'light';
+            if (newTheme === 'dark') {
+                body.classList.add('dark-mode');
+                swapIcons(true);
+            } else {
+                body.classList.remove('dark-mode');
+                swapIcons(false);
+            }
+        }
+    });
     
     // Toggle theme
     themeToggle.addEventListener('click', function() {

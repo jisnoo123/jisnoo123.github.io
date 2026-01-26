@@ -24,32 +24,36 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
+    // Cache media query for system theme preference
+    const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    
     // Function to get system theme preference
     function getSystemTheme() {
-        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        return darkModeMediaQuery.matches ? 'dark' : 'light';
+    }
+    
+    // Function to apply theme
+    function applyTheme(theme) {
+        if (theme === 'dark') {
+            body.classList.add('dark-mode');
+            swapIcons(true);
+        } else {
+            body.classList.remove('dark-mode');
+            swapIcons(false);
+        }
     }
     
     // Check for saved theme preference or use system preference
     const savedTheme = localStorage.getItem('theme');
     const currentTheme = savedTheme || getSystemTheme();
-    
-    if (currentTheme === 'dark') {
-        body.classList.add('dark-mode');
-        swapIcons(true);
-    }
+    applyTheme(currentTheme);
     
     // Listen for system theme changes (only if user hasn't manually set a preference)
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+    darkModeMediaQuery.addEventListener('change', (e) => {
         // Only auto-switch if user hasn't manually set a theme preference
         if (!localStorage.getItem('theme')) {
             const newTheme = e.matches ? 'dark' : 'light';
-            if (newTheme === 'dark') {
-                body.classList.add('dark-mode');
-                swapIcons(true);
-            } else {
-                body.classList.remove('dark-mode');
-                swapIcons(false);
-            }
+            applyTheme(newTheme);
         }
     });
     

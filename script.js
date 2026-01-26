@@ -59,14 +59,14 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Toggle theme
     themeToggle.addEventListener('click', function() {
-        body.classList.toggle('dark-mode');
+        // Determine new theme (opposite of current)
+        const newTheme = body.classList.contains('dark-mode') ? 'light' : 'dark';
+        
+        // Apply the new theme
+        applyTheme(newTheme);
         
         // Save theme preference
-        const theme = body.classList.contains('dark-mode') ? 'dark' : 'light';
-        localStorage.setItem('theme', theme);
-        
-        // Swap icons
-        swapIcons(theme === 'dark');
+        localStorage.setItem('theme', newTheme);
     });
     
     // Smooth scroll for navigation links

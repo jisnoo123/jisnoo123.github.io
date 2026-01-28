@@ -844,6 +844,12 @@ body.dark-mode .hero-link {
         margin-left: 0.5rem;
     }
     
+    /* Add minimal padding on very small screens for better touch targets */
+    .navbar .container {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+    
     /* Hero Section */
     .hero {
         padding: 3rem 0 2rem;

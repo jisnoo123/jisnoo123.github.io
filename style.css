@@ -712,12 +712,6 @@ body.dark-mode .hero-link {
 }
 
 /* Page wrapper for sticky footer */
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
 .hero,
 .section {
     flex: 1 0 auto;
@@ -813,10 +807,6 @@ body {
     }
     
     /* Minimal Header */
-    .theme-toggle {
-        width: 36px;
-        height: 36px;
-    }
     
     /* Hero Section */
     .hero {

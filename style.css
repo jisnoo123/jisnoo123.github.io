@@ -82,6 +82,8 @@ html {
     align-items: center;
     padding-left: 0;
     padding-right: 0;
+    max-width: none;
+    width: 100%;
 }
 
 .nav-menu {
@@ -690,6 +692,14 @@ body.dark-mode .hero-link {
         padding: 0 24px;
     }
     
+    /* Navbar edge-to-edge layout */
+    .navbar .container {
+        padding-left: 0;
+        padding-right: 0;
+        max-width: none;
+        width: 100%;
+    }
+    
     /* Navbar responsive */
     .nav-menu {
         gap: 1rem;
@@ -844,10 +854,12 @@ body.dark-mode .hero-link {
         margin-left: 0.5rem;
     }
     
-    /* Add minimal padding on very small screens for better touch targets */
+    /* No padding on navbar for edge-to-edge layout */
     .navbar .container {
-        padding-left: 8px;
-        padding-right: 8px;
+        padding-left: 0;
+        padding-right: 0;
+        max-width: none;
+        width: 100%;
     }
     
     /* Hero Section */

@@ -80,8 +80,8 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 24px;
+    padding-right: 24px;
 }
 
 .nav-menu {
@@ -846,8 +846,8 @@ body.dark-mode .hero-link {
     
     /* Add minimal padding on very small screens for better touch targets */
     .navbar .container {
-        padding-left: 8px;
-        padding-right: 8px;
+        padding-left: 16px;
+        padding-right: 16px;
     }
     
     /* Hero Section */

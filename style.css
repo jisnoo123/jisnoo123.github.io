@@ -82,6 +82,36 @@ html {
     align-items: center;
 }
 
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: var(--navbar-text);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    opacity: 0.85;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--secondary-color);
+    opacity: 1;
+}
+
+.nav-link[aria-current="page"] {
+    color: var(--secondary-color);
+    opacity: 1;
+    font-weight: 600;
+}
+
+.nav-brand[aria-current="page"] {
+    color: var(--primary-color);
+}
+
 .nav-brand {
     color: var(--secondary-color);
     font-size: 1.25rem;
@@ -93,11 +123,6 @@ html {
 .nav-brand:hover {
     color: var(--primary-color);
     text-decoration: none;
-}
-
-.nav-menu a:hover {
-    color: var(--secondary-color);
-    opacity: 1;
 }
 
 /* Theme Toggle Button */
@@ -218,6 +243,10 @@ body.dark-mode .hero-bio {
 
 .hero-bio p:last-child {
     margin-bottom: 0;
+}
+
+.hero-bio .centered {
+    text-align: center;
 }
 
 .hero-links {
@@ -656,6 +685,15 @@ body.dark-mode .hero-link {
         padding: 0 24px;
     }
     
+    /* Navbar responsive */
+    .nav-menu {
+        gap: 1rem;
+    }
+    
+    .nav-link {
+        font-size: 0.9rem;
+    }
+    
     /* Minimal Header */
     .theme-toggle {
         width: 36px;
@@ -785,6 +823,14 @@ body.dark-mode .hero-link {
     
     .nav-brand {
         font-size: 1.15rem;
+    }
+    
+    .nav-menu {
+        gap: 0.75rem;
+    }
+    
+    .nav-link {
+        font-size: 0.85rem;
     }
 
     .theme-toggle {

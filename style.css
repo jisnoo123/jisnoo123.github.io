@@ -86,6 +86,7 @@ html {
     display: flex;
     align-items: center;
     gap: 2rem;
+    flex-wrap: nowrap;
 }
 
 .nav-link {
@@ -95,6 +96,8 @@ html {
     font-weight: 500;
     opacity: 0.85;
     transition: all 0.3s ease;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
 .nav-link:hover {

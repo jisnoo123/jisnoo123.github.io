@@ -102,6 +102,16 @@ html {
     opacity: 1;
 }
 
+.nav-link[aria-current="page"] {
+    color: var(--secondary-color);
+    opacity: 1;
+    font-weight: 600;
+}
+
+.nav-brand[aria-current="page"] {
+    color: var(--primary-color);
+}
+
 .nav-brand {
     color: var(--secondary-color);
     font-size: 1.25rem;
@@ -233,6 +243,10 @@ body.dark-mode .hero-bio {
 
 .hero-bio p:last-child {
     margin-bottom: 0;
+}
+
+.hero-bio .centered {
+    text-align: center;
 }
 
 .hero-links {

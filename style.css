@@ -82,6 +82,8 @@ html {
     align-items: center;
     padding-left: 0;
     padding-right: 0;
+    max-width: none;
+    width: 100%;
 }
 
 .nav-menu {

@@ -692,6 +692,14 @@ body.dark-mode .hero-link {
         padding: 0 24px;
     }
     
+    /* Navbar edge-to-edge layout */
+    .navbar .container {
+        padding-left: 0;
+        padding-right: 0;
+        max-width: none;
+        width: 100%;
+    }
+    
     /* Navbar responsive */
     .nav-menu {
         gap: 1rem;
@@ -850,6 +858,8 @@ body.dark-mode .hero-link {
     .navbar .container {
         padding-left: 0;
         padding-right: 0;
+        max-width: none;
+        width: 100%;
     }
     
     /* Hero Section */

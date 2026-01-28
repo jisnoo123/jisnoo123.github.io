@@ -3,20 +3,70 @@ document.addEventListener('DOMContentLoaded', function() {
     const themeToggle = document.getElementById('themeToggle');
     const body = document.body;
     
-    // Check for saved theme preference or default to light mode
-    const currentTheme = localStorage.getItem('theme') || 'light';
+    // Cache icon elements for better performance
+    const logoIcons = document.querySelectorAll('img[src*="files/images/logos/"]');
     
-    if (currentTheme === 'dark') {
-        body.classList.add('dark-mode');
+    // Function to swap icons based on theme
+    function swapIcons(isDarkMode) {
+        logoIcons.forEach(icon => {
+            const src = icon.getAttribute('src');
+            if (isDarkMode) {
+                // Switch to dark mode icons (add -dark suffix before .png)
+                if (!src.includes('-dark.png')) {
+                    icon.setAttribute('src', src.replace(/\.png$/, '-dark.png'));
+                }
+            } else {
+                // Switch back to light mode icons (remove -dark suffix)
+                if (src.includes('-dark.png')) {
+                    icon.setAttribute('src', src.replace(/-dark\.png$/, '.png'));
+                }
+            }
+        });
     }
+    
+    // Cache media query for system theme preference
+    const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    
+    // Function to get system theme preference
+    function getSystemTheme() {
+        return darkModeMediaQuery.matches ? 'dark' : 'light';
+    }
+    
+    // Function to apply theme
+    function applyTheme(theme) {
+        if (theme === 'dark') {
+            body.classList.add('dark-mode');
+            swapIcons(true);
+        } else {
+            body.classList.remove('dark-mode');
+            swapIcons(false);
+        }
+    }
+    
+    // Check for saved theme preference or use system preference
+    const savedTheme = localStorage.getItem('theme');
+    const currentTheme = savedTheme || getSystemTheme();
+    applyTheme(currentTheme);
+    
+    // Listen for system theme changes (only if user hasn't manually set a preference)
+    darkModeMediaQuery.addEventListener('change', (e) => {
+        // Only auto-switch if user hasn't manually set a theme preference
+        if (!localStorage.getItem('theme')) {
+            const newTheme = e.matches ? 'dark' : 'light';
+            applyTheme(newTheme);
+        }
+    });
     
     // Toggle theme
     themeToggle.addEventListener('click', function() {
-        body.classList.toggle('dark-mode');
+        // Determine new theme (opposite of current)
+        const newTheme = body.classList.contains('dark-mode') ? 'light' : 'dark';
+        
+        // Apply the new theme
+        applyTheme(newTheme);
         
         // Save theme preference
-        const theme = body.classList.contains('dark-mode') ? 'dark' : 'light';
-        localStorage.setItem('theme', theme);
+        localStorage.setItem('theme', newTheme);
     });
     
     // Smooth scroll for navigation links

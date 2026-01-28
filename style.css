@@ -80,6 +80,41 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: nowrap;
+}
+
+.nav-link {
+    color: var(--navbar-text);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    opacity: 0.85;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.nav-link:hover {
+    color: var(--secondary-color);
+    opacity: 1;
+}
+
+.nav-link[aria-current="page"] {
+    color: var(--secondary-color);
+    opacity: 1;
+    font-weight: 600;
+}
+
+.nav-brand[aria-current="page"] {
+    color: var(--primary-color);
 }
 
 .nav-brand {
@@ -93,11 +128,6 @@ html {
 .nav-brand:hover {
     color: var(--primary-color);
     text-decoration: none;
-}
-
-.nav-menu a:hover {
-    color: var(--secondary-color);
-    opacity: 1;
 }
 
 /* Theme Toggle Button */
@@ -218,6 +248,10 @@ body.dark-mode .hero-bio {
 
 .hero-bio p:last-child {
     margin-bottom: 0;
+}
+
+.hero-bio .centered {
+    text-align: center;
 }
 
 .hero-links {
@@ -656,6 +690,15 @@ body.dark-mode .hero-link {
         padding: 0 24px;
     }
     
+    /* Navbar responsive */
+    .nav-menu {
+        gap: 1rem;
+    }
+    
+    .nav-link {
+        font-size: 0.9rem;
+    }
+    
     /* Minimal Header */
     .theme-toggle {
         width: 36px;
@@ -786,11 +829,25 @@ body.dark-mode .hero-link {
     .nav-brand {
         font-size: 1.15rem;
     }
+    
+    .nav-menu {
+        gap: 0.75rem;
+    }
+    
+    .nav-link {
+        font-size: 0.85rem;
+    }
 
     .theme-toggle {
         width: 36px;
         height: 36px;
         margin-left: 0.5rem;
+    }
+    
+    /* Add minimal padding on very small screens for better touch targets */
+    .navbar .container {
+        padding-left: 8px;
+        padding-right: 8px;
     }
     
     /* Hero Section */
@@ -1232,12 +1289,15 @@ body.dark-mode .specialization-item:hover {
     font-size: 0.85rem;
     color: var(--primary-color);
     text-decoration: none;
-    padding: 0.25rem 0.75rem;
+    padding: 0.25rem 0.5rem;
     border: 1.5px solid var(--primary-color);
     border-radius: 6px;
     transition: all 0.3s ease;
     font-weight: 500;
     margin-left: 0.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .cert-link:hover {
@@ -1245,6 +1305,10 @@ body.dark-mode .specialization-item:hover {
     color: white;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(255, 168, 0, 0.3);
+}
+
+.cert-link img {
+    display: block;
 }
 
 .specialization-org {

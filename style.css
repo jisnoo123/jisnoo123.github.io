@@ -184,19 +184,19 @@ html {
     border-color: var(--secondary-color);
 }
 
-.theme-toggle .sun-icon {
+.theme-toggle .bulb-icon {
     display: block;
 }
 
-.theme-toggle .moon-icon {
+.theme-toggle .bulb-off-icon {
     display: none;
 }
 
-body.dark-mode .theme-toggle .sun-icon {
+body.dark-mode .theme-toggle .bulb-icon {
     display: none;
 }
 
-body.dark-mode .theme-toggle .moon-icon {
+body.dark-mode .theme-toggle .bulb-off-icon {
     display: block;
 }
 
@@ -1518,4 +1518,11 @@ body.dark-mode .specialization-item:hover {
     .certificate-link {
         align-self: flex-end;
     }
+}
+
+/* Bullet Icon Styling */
+.bullet-icon {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 0.5rem;
 }

@@ -10,9 +10,21 @@
     <!-- Inline script to prevent theme flash - must run before body renders -->
     <script>
         (function() {
-            const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-            if (systemTheme === 'dark') {
-                document.documentElement.classList.add('dark-mode-loading');
+            try {
+                // Check localStorage first, then fall back to system preference
+                const savedTheme = localStorage.getItem('theme');
+                const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+                const theme = (savedTheme === 'dark' || savedTheme === 'light') ? savedTheme : systemTheme;
+                
+                if (theme === 'dark') {
+                    document.documentElement.classList.add('dark-mode-loading');
+                }
+            } catch (e) {
+                // If localStorage is unavailable, fall back to system preference
+                const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+                if (systemTheme === 'dark') {
+                    document.documentElement.classList.add('dark-mode-loading');
+                }
             }
         })();
     </script>

@@ -84,7 +84,10 @@ body.transitions-enabled {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-body.transitions-enabled * {
+body.transitions-enabled .section,
+body.transitions-enabled .navbar,
+body.transitions-enabled .theme-toggle,
+body.transitions-enabled .nav-link {
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
@@ -204,10 +207,6 @@ html {
 
 /* Prevent border color persistence in dark mode */
 body.dark-mode .theme-toggle:hover {
-    border-color: var(--border-color);
-}
-
-body.dark-mode .theme-toggle:not(:hover) {
     border-color: var(--border-color);
 }
 
@@ -749,12 +748,6 @@ body.dark-mode #news ~ .section.section-alt {
     opacity: 0.7;
 }
 
-.mobile-controls {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
 .mobile-menu-toggle .menu-icon,
 .mobile-menu-toggle .close-icon {
     width: 28px;
@@ -840,10 +833,6 @@ body.dark-mode #news ~ .section.section-alt {
     .navbar .container {
         padding-left: 1.5rem;
         padding-right: 1.5rem;
-    }
-    
-    /* Mobile nav controls: toggle button and theme toggle side by side */
-    .navbar .container {
         display: flex;
         justify-content: space-between;
         align-items: center;

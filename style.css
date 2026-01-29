@@ -673,8 +673,6 @@ body.dark-mode .hero-link {
     width: 40px;
     height: 40px;
     cursor: pointer;
-    align-items: center;
-    justify-content: center;
     padding: 0;
     transition: all 0.3s ease;
     position: relative;
@@ -774,6 +772,8 @@ body.dark-mode .hero-link {
     /* Show mobile menu toggle */
     .mobile-menu-toggle {
         display: flex;
+        align-items: center;
+        justify-content: center;
     }
     
     /* Hide nav menu by default on mobile, show as dropdown */

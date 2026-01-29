@@ -41,14 +41,28 @@ document.addEventListener('DOMContentLoaded', function() {
     function swapIcons(isDarkMode) {
         logoIcons.forEach(icon => {
             const src = icon.getAttribute('src');
+            
+            // Skip bulb icons - they are handled by CSS display properties
+            if (src.includes('bulb.png') || src.includes('bulb_off.png')) {
+                return;
+            }
+            
             if (isDarkMode) {
-                // Switch to dark mode icons (add -dark suffix before .png)
-                if (!src.includes('-dark.png')) {
+                // Special handling for bullet icons
+                if (src.includes('bullets.png') && !src.includes('bullets-dark.png')) {
+                    icon.setAttribute('src', src.replace('bullets.png', 'bullets-dark.png'));
+                }
+                // Standard dark mode icon swap (add -dark suffix before .png)
+                else if (!src.includes('-dark.png')) {
                     icon.setAttribute('src', src.replace(/\.png$/, '-dark.png'));
                 }
             } else {
-                // Switch back to light mode icons (remove -dark suffix)
-                if (src.includes('-dark.png')) {
+                // Special handling for bullet icons
+                if (src.includes('bullets-dark.png')) {
+                    icon.setAttribute('src', src.replace('bullets-dark.png', 'bullets.png'));
+                }
+                // Standard light mode icon swap (remove -dark suffix)
+                else if (src.includes('-dark.png')) {
                     icon.setAttribute('src', src.replace(/-dark\.png$/, '.png'));
                 }
             }

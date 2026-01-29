@@ -429,11 +429,14 @@ body.dark-mode .hero-link {
 }
 
 /* Apply orange background to all sections after News in light mode */
-#news ~ .section {
+#news ~ .section,
+#news ~ .section.section-alt {
     background-color: var(--news-to-footer-bg);
 }
 
 /* Dark mode: keep original backgrounds for these sections */
+html.dark-mode-loading #news,
+html.dark-mode-loading #news ~ .section,
 body.dark-mode #news,
 body.dark-mode #news ~ .section {
     background-color: transparent;
@@ -694,15 +697,17 @@ body.dark-mode #news ~ .section {
 /* Footer */
 .footer {
     background-color: var(--news-to-footer-bg);
-    color: var(--navbar-text);
+    color: var(--text-primary);
     text-align: center;
     padding: 1rem 0;
     margin-top: auto;
 }
 
-/* Dark mode: keep original background for footer */
+/* Dark mode: keep original background and text color for footer */
+html.dark-mode-loading .footer,
 body.dark-mode .footer {
     background-color: var(--navbar-bg);
+    color: var(--navbar-text);
 }
 
 /* Mobile Menu Toggle */

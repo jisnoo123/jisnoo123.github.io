@@ -2,6 +2,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const themeToggle = document.getElementById('themeToggle');
     const body = document.body;
+    const html = document.documentElement;
     const mobileMenuToggle = document.getElementById('mobileMenuToggle');
     const navMenu = document.getElementById('navMenu');
     
@@ -73,10 +74,17 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
-    // Check for saved theme preference or use system preference
-    const savedTheme = localStorage.getItem('theme');
-    const currentTheme = savedTheme || getSystemTheme();
-    applyTheme(currentTheme);
+    // Transfer dark mode from html to body if it was set during initial load
+    if (html.classList.contains('dark-mode-loading')) {
+        body.classList.add('dark-mode');
+        html.classList.remove('dark-mode-loading');
+        swapIcons(true);
+    } else {
+        // Only apply theme if it wasn't already set during initial load
+        const savedTheme = localStorage.getItem('theme');
+        const currentTheme = savedTheme || getSystemTheme();
+        applyTheme(currentTheme);
+    }
     
     // Listen for system theme changes (only if user hasn't manually set a preference)
     darkModeMediaQuery.addEventListener('change', (e) => {

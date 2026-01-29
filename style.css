@@ -25,7 +25,28 @@
     --card-bg: #ffffff;
 }
 
-/* Dark Mode Colors - Black Theme */
+/* Dark Mode Colors - Black Theme - Applied to html element during initial load */
+html.dark-mode-loading,
+html.dark-mode-loading body {
+    --primary-color: #fbbf24;
+    --secondary-color: #f59e0b;
+    --accent-color: #eab308;
+    --background: #0a0a0a;
+    --surface: #171717;
+    --surface-alt: #262626;
+    --text-primary: #fef3c7;
+    --text-secondary: #d6d3d1;
+    --text-tertiary: #a8a29e;
+    --border-color: #404040;
+    --shadow: rgba(0, 0, 0, 0.5);
+    --shadow-lg: rgba(0, 0, 0, 0.7);
+    --navbar-bg: #000000;
+    --navbar-text: #fef3c7;
+    --hero-bg: linear-gradient(135deg, #000000 0%, #171717 100%);
+    --card-bg: #171717;
+}
+
+/* Dark Mode Colors - Black Theme - Applied to body element after JS loads */
 body.dark-mode {
     --primary-color: #fbbf24;
     --secondary-color: #f59e0b;

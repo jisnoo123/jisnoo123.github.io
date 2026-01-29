@@ -2,6 +2,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const themeToggle = document.getElementById('themeToggle');
     const body = document.body;
+    const html = document.documentElement;
     const mobileMenuToggle = document.getElementById('mobileMenuToggle');
     const navMenu = document.getElementById('navMenu');
     
@@ -71,6 +72,13 @@ document.addEventListener('DOMContentLoaded', function() {
             body.classList.remove('dark-mode');
             swapIcons(false);
         }
+    }
+    
+    // Transfer dark mode from html to body if it was set during initial load
+    if (html.classList.contains('dark-mode-loading')) {
+        body.classList.add('dark-mode');
+        html.classList.remove('dark-mode-loading');
+        swapIcons(true);
     }
     
     // Check for saved theme preference or use system preference

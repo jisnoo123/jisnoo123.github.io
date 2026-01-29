@@ -6,6 +6,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const mobileMenuToggle = document.getElementById('mobileMenuToggle');
     const navMenu = document.getElementById('navMenu');
     
+    // Enable transitions after page load to prevent flicker on initial render
+    // This ensures smooth transitions when navigating between pages
+    setTimeout(() => {
+        body.classList.add('transitions-enabled');
+    }, 100);
+    
     // Cache icon elements for better performance
     const logoIcons = document.querySelectorAll('img[src*="files/images/logos/"]');
     
@@ -49,9 +55,10 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Skip navbar icons - they should always use light-colored versions (dark.png suffix)
             // because the navbar is always dark in both light and dark modes
+            // Also skip the home logo as it should always use the dark version
             if (src.includes('menu-dark.png') || src.includes('close-dark.png') ||
                 src.includes('teaching_resources-dark.png') || src.includes('blogs-dark.png') ||
-                src.includes('gallery-dark.png')) {
+                src.includes('gallery-dark.png') || src.includes('home-dark.png')) {
                 return;
             }
             

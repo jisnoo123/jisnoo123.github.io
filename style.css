@@ -696,18 +696,11 @@ body.dark-mode #news ~ .section {
 
 /* Footer */
 .footer {
-    background-color: var(--news-to-footer-bg);
-    color: var(--text-primary);
+    background-color: var(--navbar-bg);
+    color: var(--navbar-text);
     text-align: center;
     padding: 1rem 0;
     margin-top: auto;
-}
-
-/* Dark mode: keep original background and text color for footer */
-html.dark-mode-loading .footer,
-body.dark-mode .footer {
-    background-color: var(--navbar-bg);
-    color: var(--navbar-text);
 }
 
 /* Mobile Menu Toggle */

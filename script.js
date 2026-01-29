@@ -2,9 +2,39 @@
 document.addEventListener('DOMContentLoaded', function() {
     const themeToggle = document.getElementById('themeToggle');
     const body = document.body;
+    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+    const navMenu = document.getElementById('navMenu');
     
     // Cache icon elements for better performance
     const logoIcons = document.querySelectorAll('img[src*="files/images/logos/"]');
+    
+    // Mobile menu toggle
+    if (mobileMenuToggle && navMenu) {
+        mobileMenuToggle.addEventListener('click', function() {
+            mobileMenuToggle.classList.toggle('active');
+            navMenu.classList.toggle('mobile-open');
+        });
+        
+        // Close mobile menu when clicking on a nav link
+        const navLinks = navMenu.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenuToggle.classList.remove('active');
+                navMenu.classList.remove('mobile-open');
+            });
+        });
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const isClickInsideNav = navMenu.contains(event.target);
+            const isClickOnToggle = mobileMenuToggle.contains(event.target);
+            
+            if (!isClickInsideNav && !isClickOnToggle && navMenu.classList.contains('mobile-open')) {
+                mobileMenuToggle.classList.remove('active');
+                navMenu.classList.remove('mobile-open');
+            }
+        });
+    }
     
     // Function to swap icons based on theme
     function swapIcons(isDarkMode) {

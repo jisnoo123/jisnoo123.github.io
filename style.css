@@ -53,6 +53,9 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 html {
@@ -80,8 +83,8 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
     max-width: none;
     width: 100%;
 }
@@ -102,6 +105,14 @@ html {
     transition: all 0.3s ease;
     white-space: nowrap;
     flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nav-icon {
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .nav-link:hover {
@@ -651,6 +662,63 @@ body.dark-mode .hero-link {
     color: var(--navbar-text);
     text-align: center;
     padding: 1rem 0;
+    margin-top: auto;
+}
+
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+    display: none;
+    background: transparent;
+    border: 2px solid var(--navbar-text);
+    border-radius: 8px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    padding: 0;
+    transition: all 0.3s ease;
+}
+
+.mobile-menu-toggle:hover {
+    background: var(--surface);
+    border-color: var(--secondary-color);
+}
+
+.mobile-menu-toggle span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: var(--navbar-text);
+    transition: all 0.3s ease;
+}
+
+.mobile-menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.mobile-menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.nav-menu.mobile-open {
+    display: flex;
+}
+
+/* Page wrapper for sticky footer */
+.hero,
+.section {
+    flex: 1 0 auto;
+}
+
+.footer {
+    flex-shrink: 0;
 }
 
 .footer p {
@@ -692,28 +760,53 @@ body.dark-mode .hero-link {
         padding: 0 24px;
     }
     
-    /* Navbar edge-to-edge layout */
+    /* Navbar mobile layout */
     .navbar .container {
-        padding-left: 0;
-        padding-right: 0;
-        max-width: none;
-        width: 100%;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
     }
     
-    /* Navbar responsive */
+    /* Show mobile menu toggle */
+    .mobile-menu-toggle {
+        display: flex;
+    }
+    
+    /* Hide nav menu by default on mobile, show as dropdown */
     .nav-menu {
-        gap: 1rem;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--navbar-bg);
+        flex-direction: column;
+        gap: 0;
+        padding: 1rem 0;
+        box-shadow: 0 4px 8px var(--shadow-lg);
+        display: none;
+        z-index: 999;
+    }
+    
+    .nav-menu.mobile-open {
+        display: flex;
     }
     
     .nav-link {
-        font-size: 0.9rem;
+        padding: 1rem 1.5rem;
+        width: 100%;
+        justify-content: flex-start;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .nav-link:last-of-type {
+        border-bottom: none;
+    }
+    
+    .theme-toggle {
+        margin: 1rem 1.5rem;
+        align-self: flex-start;
     }
     
     /* Minimal Header */
-    .theme-toggle {
-        width: 36px;
-        height: 36px;
-    }
     
     /* Hero Section */
     .hero {
@@ -836,30 +929,29 @@ body.dark-mode .hero-link {
         padding: 0.75rem 0;
     }
     
+    .navbar .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
     .nav-brand {
         font-size: 1.15rem;
     }
     
-    .nav-menu {
-        gap: 0.75rem;
+    .mobile-menu-toggle {
+        width: 36px;
+        height: 36px;
     }
     
     .nav-link {
-        font-size: 0.85rem;
+        font-size: 0.9rem;
+        padding: 0.875rem 1rem;
     }
 
     .theme-toggle {
         width: 36px;
         height: 36px;
-        margin-left: 0.5rem;
-    }
-    
-    /* No padding on navbar for edge-to-edge layout */
-    .navbar .container {
-        padding-left: 0;
-        padding-right: 0;
-        max-width: none;
-        width: 100%;
+        margin: 1rem;
     }
     
     /* Hero Section */

@@ -144,7 +144,6 @@ html {
 .nav-link[aria-current="page"] {
     color: var(--secondary-color);
     opacity: 1;
-    font-weight: 600;
 }
 
 .nav-brand[aria-current="page"] {

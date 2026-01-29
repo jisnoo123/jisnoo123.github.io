@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Function to apply theme
-    function applyTheme(theme) {
+    function applyTheme(theme, saveToStorage = false) {
         if (theme === 'dark') {
             body.classList.add('dark-mode');
             swapIcons(true);
@@ -72,6 +72,20 @@ document.addEventListener('DOMContentLoaded', function() {
             body.classList.remove('dark-mode');
             swapIcons(false);
         }
+        
+        // Save to localStorage if requested
+        if (saveToStorage) {
+            localStorage.setItem('theme', theme);
+        }
+    }
+    
+    // Get the current theme preference
+    function getCurrentTheme() {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            return savedTheme;
+        }
+        return getSystemTheme();
     }
     
     // Transfer dark mode from html to body if it was set during initial load
@@ -80,15 +94,18 @@ document.addEventListener('DOMContentLoaded', function() {
         html.classList.remove('dark-mode-loading');
         swapIcons(true);
     } else {
-        // Apply theme based on system preference
-        const currentTheme = getSystemTheme();
+        // Apply theme based on saved preference or system preference
+        const currentTheme = getCurrentTheme();
         applyTheme(currentTheme);
     }
     
-    // Listen for system theme changes
+    // Listen for system theme changes only if no saved preference
     darkModeMediaQuery.addEventListener('change', (e) => {
-        const newTheme = e.matches ? 'dark' : 'light';
-        applyTheme(newTheme);
+        // Only follow system preference if user hasn't set a preference
+        if (!localStorage.getItem('theme')) {
+            const newTheme = e.matches ? 'dark' : 'light';
+            applyTheme(newTheme);
+        }
     });
     
     // Toggle theme
@@ -96,8 +113,8 @@ document.addEventListener('DOMContentLoaded', function() {
         // Determine new theme (opposite of current)
         const newTheme = body.classList.contains('dark-mode') ? 'light' : 'dark';
         
-        // Apply the new theme
-        applyTheme(newTheme);
+        // Apply the new theme and save to localStorage
+        applyTheme(newTheme, true);
     });
     
     // Smooth scroll for navigation links

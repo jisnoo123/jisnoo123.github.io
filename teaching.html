@@ -10,8 +10,12 @@
     <!-- Inline script to prevent theme flash - must run before body renders -->
     <script>
         (function() {
+            // Check localStorage first, then fall back to system preference
+            const savedTheme = localStorage.getItem('theme');
             const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-            if (systemTheme === 'dark') {
+            const theme = savedTheme || systemTheme;
+            
+            if (theme === 'dark') {
                 document.documentElement.classList.add('dark-mode-loading');
             }
         })();

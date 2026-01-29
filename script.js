@@ -75,15 +75,26 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Save to localStorage if requested
         if (saveToStorage) {
-            localStorage.setItem('theme', theme);
+            try {
+                localStorage.setItem('theme', theme);
+            } catch (e) {
+                // localStorage unavailable, continue without saving
+                console.warn('Unable to save theme preference:', e);
+            }
         }
     }
     
     // Get the current theme preference
     function getCurrentTheme() {
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme) {
-            return savedTheme;
+        try {
+            const savedTheme = localStorage.getItem('theme');
+            // Validate saved theme value
+            if (savedTheme === 'dark' || savedTheme === 'light') {
+                return savedTheme;
+            }
+        } catch (e) {
+            // localStorage unavailable, fall back to system preference
+            console.warn('Unable to access theme preference:', e);
         }
         return getSystemTheme();
     }
@@ -102,7 +113,13 @@ document.addEventListener('DOMContentLoaded', function() {
     // Listen for system theme changes only if no saved preference
     darkModeMediaQuery.addEventListener('change', (e) => {
         // Only follow system preference if user hasn't set a preference
-        if (!localStorage.getItem('theme')) {
+        try {
+            if (!localStorage.getItem('theme')) {
+                const newTheme = e.matches ? 'dark' : 'light';
+                applyTheme(newTheme);
+            }
+        } catch (e) {
+            // localStorage unavailable, always follow system preference
             const newTheme = e.matches ? 'dark' : 'light';
             applyTheme(newTheme);
         }

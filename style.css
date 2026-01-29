@@ -186,11 +186,6 @@ html {
 
 .theme-toggle .bulb-icon {
     display: block;
-    filter: invert(1);
-}
-
-body.dark-mode .theme-toggle .bulb-icon {
-    filter: invert(0);
 }
 
 /* Hero Section */

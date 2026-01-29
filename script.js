@@ -47,6 +47,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
             
+            // Skip navbar icons - they should always use light-colored versions (dark.png suffix)
+            // because the navbar is always dark in both light and dark modes
+            if (src.includes('menu-dark.png') || src.includes('close-dark.png') ||
+                src.includes('teaching_resources-dark.png') || src.includes('blogs-dark.png') ||
+                src.includes('gallery-dark.png')) {
+                return;
+            }
+            
             if (isDarkMode) {
                 // Special handling for bullet icons
                 if (src.includes('bullets.png') && !src.includes('bullets-dark.png')) {

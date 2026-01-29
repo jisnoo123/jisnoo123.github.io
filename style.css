@@ -23,6 +23,7 @@
     --navbar-text: #fef3c7;
     --hero-bg: #ffffff;
     --card-bg: #ffffff;
+    --news-to-footer-bg: #FA9F42;
 }
 
 /* Dark Mode Colors - Black Theme - Applied to html element during initial load */
@@ -424,6 +425,18 @@ body.dark-mode .hero-link {
 /* News Section */
 #news {
     padding-top: 4.5rem;
+    background-color: var(--news-to-footer-bg);
+}
+
+/* Apply orange background to all sections after News in light mode */
+#news ~ .section {
+    background-color: var(--news-to-footer-bg);
+}
+
+/* Dark mode: keep original backgrounds for these sections */
+body.dark-mode #news,
+body.dark-mode #news ~ .section {
+    background-color: transparent;
 }
 
 .news-item {
@@ -680,11 +693,16 @@ body.dark-mode .hero-link {
 
 /* Footer */
 .footer {
-    background-color: var(--navbar-bg);
+    background-color: var(--news-to-footer-bg);
     color: var(--navbar-text);
     text-align: center;
     padding: 1rem 0;
     margin-top: auto;
+}
+
+/* Dark mode: keep original background for footer */
+body.dark-mode .footer {
+    background-color: var(--navbar-bg);
 }
 
 /* Mobile Menu Toggle */

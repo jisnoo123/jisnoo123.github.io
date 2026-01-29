@@ -184,19 +184,7 @@ html {
     border-color: var(--secondary-color);
 }
 
-.theme-toggle .sun-icon {
-    display: block;
-}
-
-.theme-toggle .moon-icon {
-    display: none;
-}
-
-body.dark-mode .theme-toggle .sun-icon {
-    display: none;
-}
-
-body.dark-mode .theme-toggle .moon-icon {
+.theme-toggle .bulb-icon {
     display: block;
 }
 

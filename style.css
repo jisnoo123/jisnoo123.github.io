@@ -184,20 +184,13 @@ html {
     border-color: var(--secondary-color);
 }
 
-.theme-toggle .sun-icon {
+.theme-toggle .bulb-icon {
     display: block;
+    filter: invert(1);
 }
 
-.theme-toggle .moon-icon {
-    display: none;
-}
-
-body.dark-mode .theme-toggle .sun-icon {
-    display: none;
-}
-
-body.dark-mode .theme-toggle .moon-icon {
-    display: block;
+body.dark-mode .theme-toggle .bulb-icon {
+    filter: invert(0);
 }
 
 /* Hero Section */

@@ -42,26 +42,23 @@ document.addEventListener('DOMContentLoaded', function() {
         logoIcons.forEach(icon => {
             const src = icon.getAttribute('src');
             
+            // Skip bulb icons - they are handled by CSS display properties
+            if (src.includes('bulb.png') || src.includes('bulb_off.png')) {
+                return;
+            }
+            
             if (isDarkMode) {
-                // Special handling for bulb icons in theme toggle
-                if (src.includes('bulb.png')) {
-                    icon.setAttribute('src', src.replace('bulb.png', 'bulb_off.png'));
-                }
                 // Special handling for bullet icons
-                else if (src.includes('bullets.png') && !src.includes('bullets-dark.png')) {
+                if (src.includes('bullets.png') && !src.includes('bullets-dark.png')) {
                     icon.setAttribute('src', src.replace('bullets.png', 'bullets-dark.png'));
                 }
                 // Standard dark mode icon swap (add -dark suffix before .png)
-                else if (!src.includes('-dark.png') && !src.includes('bulb_off.png')) {
+                else if (!src.includes('-dark.png')) {
                     icon.setAttribute('src', src.replace(/\.png$/, '-dark.png'));
                 }
             } else {
-                // Special handling for bulb icons in theme toggle
-                if (src.includes('bulb_off.png')) {
-                    icon.setAttribute('src', src.replace('bulb_off.png', 'bulb.png'));
-                }
                 // Special handling for bullet icons
-                else if (src.includes('bullets-dark.png')) {
+                if (src.includes('bullets-dark.png')) {
                     icon.setAttribute('src', src.replace('bullets-dark.png', 'bullets.png'));
                 }
                 // Standard light mode icon swap (remove -dark suffix)

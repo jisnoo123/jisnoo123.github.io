@@ -80,19 +80,15 @@ document.addEventListener('DOMContentLoaded', function() {
         html.classList.remove('dark-mode-loading');
         swapIcons(true);
     } else {
-        // Only apply theme if it wasn't already set during initial load
-        const savedTheme = localStorage.getItem('theme');
-        const currentTheme = savedTheme || getSystemTheme();
+        // Apply theme based on system preference
+        const currentTheme = getSystemTheme();
         applyTheme(currentTheme);
     }
     
-    // Listen for system theme changes (only if user hasn't manually set a preference)
+    // Listen for system theme changes
     darkModeMediaQuery.addEventListener('change', (e) => {
-        // Only auto-switch if user hasn't manually set a theme preference
-        if (!localStorage.getItem('theme')) {
-            const newTheme = e.matches ? 'dark' : 'light';
-            applyTheme(newTheme);
-        }
+        const newTheme = e.matches ? 'dark' : 'light';
+        applyTheme(newTheme);
     });
     
     // Toggle theme
@@ -102,9 +98,6 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Apply the new theme
         applyTheme(newTheme);
-        
-        // Save theme preference
-        localStorage.setItem('theme', newTheme);
     });
     
     // Smooth scroll for navigation links

@@ -79,12 +79,12 @@ document.addEventListener('DOMContentLoaded', function() {
         body.classList.add('dark-mode');
         html.classList.remove('dark-mode-loading');
         swapIcons(true);
+    } else {
+        // Only apply theme if it wasn't already set during initial load
+        const savedTheme = localStorage.getItem('theme');
+        const currentTheme = savedTheme || getSystemTheme();
+        applyTheme(currentTheme);
     }
-    
-    // Check for saved theme preference or use system preference
-    const savedTheme = localStorage.getItem('theme');
-    const currentTheme = savedTheme || getSystemTheme();
-    applyTheme(currentTheme);
     
     // Listen for system theme changes (only if user hasn't manually set a preference)
     darkModeMediaQuery.addEventListener('change', (e) => {

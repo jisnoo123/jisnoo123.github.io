@@ -186,6 +186,8 @@ html {
 
 .theme-toggle .bulb-icon {
     display: block;
+    /* Apply color #FF8552 (orange) to bulb icon in light mode for better visual appearance */
+    filter: invert(54%) sepia(77%) saturate(1847%) hue-rotate(336deg) brightness(102%) contrast(101%);
 }
 
 .theme-toggle .bulb-off-icon {

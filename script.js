@@ -6,6 +6,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const mobileMenuToggle = document.getElementById('mobileMenuToggle');
     const navMenu = document.getElementById('navMenu');
     
+    // Enable transitions after page load to prevent flicker on initial render
+    // This ensures smooth transitions when navigating between pages
+    setTimeout(() => {
+        body.classList.add('transitions-enabled');
+    }, 100);
+    
     // Cache icon elements for better performance
     const logoIcons = document.querySelectorAll('img[src*="files/images/logos/"]');
     

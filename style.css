@@ -366,6 +366,29 @@ body.dark-mode .hero-link {
     background-color: var(--background);
 }
 
+/* News Section */
+#news {
+    padding-top: 4.5rem;
+    background-color: var(--news-to-footer-bg);
+}
+
+/* Apply orange background to all sections after News in light mode */
+/* These rules must come after .section-alt to override it */
+#news ~ .section,
+#news ~ .section.section-alt {
+    background-color: var(--news-to-footer-bg);
+}
+
+/* Dark mode: keep original backgrounds for these sections */
+html.dark-mode-loading #news,
+html.dark-mode-loading #news ~ .section,
+html.dark-mode-loading #news ~ .section.section-alt,
+body.dark-mode #news,
+body.dark-mode #news ~ .section,
+body.dark-mode #news ~ .section.section-alt {
+    background-color: transparent;
+}
+
 .section h2 {
     font-size: 2.25rem;
     font-weight: 700;
@@ -446,26 +469,6 @@ body.dark-mode .hero-link {
     color: var(--text-secondary);
     line-height: 1.7;
     margin-top: 0.75rem;
-}
-
-/* News Section */
-#news {
-    padding-top: 4.5rem;
-    background-color: var(--news-to-footer-bg);
-}
-
-/* Apply orange background to all sections after News in light mode */
-#news ~ .section,
-#news ~ .section.section-alt {
-    background-color: var(--news-to-footer-bg);
-}
-
-/* Dark mode: keep original backgrounds for these sections */
-html.dark-mode-loading #news,
-html.dark-mode-loading #news ~ .section,
-body.dark-mode #news,
-body.dark-mode #news ~ .section {
-    background-color: transparent;
 }
 
 .news-item {

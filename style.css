@@ -27,8 +27,7 @@
 }
 
 /* Dark Mode Colors - Black Theme - Applied to html element during initial load */
-html.dark-mode-loading,
-html.dark-mode-loading body {
+html.dark-mode-loading {
     --primary-color: #fbbf24;
     --secondary-color: #f59e0b;
     --accent-color: #eab308;

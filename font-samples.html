@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Font Style Samples - Jisnoo Dev Pal</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&family=Lato:wght@400;700&family=Montserrat:wght@400;700&family=Raleway:wght@400;700&family=Playfair+Display:wght@400;700&family=Merriweather:wght@400;700&family=Cormorant+Garamond:wght@400;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 40px 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            text-align: center;
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .intro {
+            text-align: center;
+            color: white;
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+        
+        .font-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .font-sample {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+        
+        .font-sample:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+        
+        .font-name {
+            font-size: 1rem;
+            color: #667eea;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .sample-text {
+            font-size: 2.5rem;
+            color: #1c1917;
+            line-height: 1.3;
+            margin-bottom: 15px;
+        }
+        
+        .font-description {
+            font-size: 0.9rem;
+            color: #666;
+            font-style: italic;
+            margin-top: 15px;
+        }
+        
+        /* Font Families */
+        .garamond {
+            font-family: Garamond, Baskerville, 'Baskerville Old Face', 'Hoefler Text', 'Times New Roman', serif;
+        }
+        
+        .georgia {
+            font-family: Georgia, 'Times New Roman', serif;
+        }
+        
+        .palatino {
+            font-family: Palatino, 'Palatino Linotype', 'Book Antiqua', serif;
+        }
+        
+        .times {
+            font-family: 'Times New Roman', Times, serif;
+        }
+        
+        .helvetica {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+        
+        .arial {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .verdana {
+            font-family: Verdana, Geneva, sans-serif;
+        }
+        
+        .trebuchet {
+            font-family: 'Trebuchet MS', Helvetica, sans-serif;
+        }
+        
+        .roboto {
+            font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
+        }
+        
+        .opensans {
+            font-family: 'Open Sans', Arial, sans-serif;
+        }
+        
+        .lato {
+            font-family: 'Lato', Arial, sans-serif;
+        }
+        
+        .montserrat {
+            font-family: 'Montserrat', Arial, sans-serif;
+        }
+        
+        .raleway {
+            font-family: 'Raleway', Arial, sans-serif;
+        }
+        
+        .playfair {
+            font-family: 'Playfair Display', Georgia, serif;
+        }
+        
+        .merriweather {
+            font-family: 'Merriweather', Georgia, serif;
+        }
+        
+        .cormorant {
+            font-family: 'Cormorant Garamond', Garamond, serif;
+        }
+        
+        .note {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            margin-top: 40px;
+        }
+        
+        .note h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+        
+        .note p {
+            color: #333;
+            line-height: 1.8;
+            margin-bottom: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .font-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .sample-text {
+                font-size: 2rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Font Style Samples</h1>
+        <p class="intro">Explore different font styles for "Jisnoo Dev Pal"</p>
+        
+        <div class="font-grid">
+            <!-- Current Font -->
+            <div class="font-sample">
+                <div class="font-name">Garamond (Current)</div>
+                <div class="sample-text garamond">Jisnoo Dev Pal</div>
+                <div class="font-description">Classic, elegant serif font. Currently in use.</div>
+            </div>
+            
+            <!-- Serif Fonts -->
+            <div class="font-sample">
+                <div class="font-name">Georgia</div>
+                <div class="sample-text georgia">Jisnoo Dev Pal</div>
+                <div class="font-description">Professional serif font, excellent readability</div>
+            </div>
+            
+            <div class="font-sample">
+                <div class="font-name">Palatino</div>
+                <div class="sample-text palatino">Jisnoo Dev Pal</div>
+                <div class="font-description">Renaissance-inspired serif, sophisticated</div>
+            </div>
+            
+            <div class="font-sample">
+                <div class="font-name">Times New Roman</div>
+                <div class="sample-text times">Jisnoo Dev Pal</div>
+                <div class="font-description">Traditional serif, widely recognized</div>
+            </div>
+            
+            <div class="font-sample">
+                <div class="font-name">Playfair Display</div>
+                <div class="sample-text playfair">Jisnoo Dev Pal</div>
+                <div class="font-description">Elegant high-contrast serif</div>
+            </div>
+            
+            <div class="font-sample">
+                <div class="font-name">Merriweather</div>
+                <div class="sample-text merriweather">Jisnoo Dev Pal</div>
+                <div class="font-description">Designed for screen readability</div>
+            </div>
+            
+            <div class="font-sample">
+                <div class="font-name">Cormorant Garamond</div>
+                <div class="sample-text cormorant">Jisnoo Dev Pal</div>
+                <div class="font-description">Digital revival of classic Garamond</div>
+            </div>
+            
+            <!-- Sans-Serif Fonts -->
+            <div class="font-sample">
+                <div class="font-name">Helvetica</div>
+                <div class="sample-text helvetica">Jisnoo Dev Pal</div>
+                <div class="font-description">Clean, modern sans-serif</div>
+            </div>
+            
+            <div class="font-sample">
+                <div class="font-name">Arial</div>
+                <div class="sample-text arial">Jisnoo Dev Pal</div>
+                <div class="font-description">Simple and versatile sans-serif</div>
+            </div>
+            
+            <div class="font-sample">
+                <div class="font-name">Verdana</div>
+                <div class="sample-text verdana">Jisnoo Dev Pal</div>
+                <div class="font-description">Optimized for screen display</div>
+            </div>
+            
+            <div class="font-sample">
+                <div class="font-name">Trebuchet MS</div>
+                <div class="sample-text trebuchet">Jisnoo Dev Pal</div>
+                <div class="font-description">Humanist sans-serif, approachable</div>
+            </div>
+            
+            <div class="font-sample">
+                <div class="font-name">Roboto</div>
+                <div class="sample-text roboto">Jisnoo Dev Pal</div>
+                <div class="font-description">Modern geometric sans-serif</div>
+            </div>
+            
+            <div class="font-sample">
+                <div class="font-name">Open Sans</div>
+                <div class="sample-text opensans">Jisnoo Dev Pal</div>
+                <div class="font-description">Friendly and neutral sans-serif</div>
+            </div>
+            
+            <div class="font-sample">
+                <div class="font-name">Lato</div>
+                <div class="sample-text lato">Jisnoo Dev Pal</div>
+                <div class="font-description">Warm sans-serif with rounded elements</div>
+            </div>
+            
+            <div class="font-sample">
+                <div class="font-name">Montserrat</div>
+                <div class="sample-text montserrat">Jisnoo Dev Pal</div>
+                <div class="font-description">Geometric sans-serif, inspired by Buenos Aires</div>
+            </div>
+            
+            <div class="font-sample">
+                <div class="font-name">Raleway</div>
+                <div class="sample-text raleway">Jisnoo Dev Pal</div>
+                <div class="font-description">Elegant thin sans-serif</div>
+            </div>
+        </div>
+        
+        <div class="note">
+            <h2>How to Choose Your Font</h2>
+            <p><strong>Serif Fonts (with decorative strokes):</strong> Traditional, elegant, and formal. Great for academic or professional websites.</p>
+            <p><strong>Sans-Serif Fonts (clean and simple):</strong> Modern, clean, and easy to read on screens. Perfect for contemporary designs.</p>
+            <p><strong>Consider:</strong></p>
+            <ul style="margin-left: 20px; line-height: 1.8; color: #333;">
+                <li>Readability across different devices</li>
+                <li>The personality you want to convey</li>
+                <li>How it pairs with your existing design</li>
+                <li>Professional vs. casual appearance</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

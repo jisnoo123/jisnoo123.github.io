@@ -201,6 +201,26 @@ If you want to try something more modern:
 2. **Montserrat** - Bold and contemporary
 3. **Open Sans** - Friendly and approachable
 
+## Applying to All Pages
+
+The font change in `style.css` will automatically apply to all pages on your website:
+- `index.html` (main page)
+- `blogs.html`
+- `gallery.html`
+- `teaching.html`
+
+Since all pages use the same `style.css` file, you only need to make the change once!
+
+If you chose a Google Font, remember to add the font link to the `<head>` section of each HTML file:
+- index.html
+- blogs.html
+- gallery.html
+- teaching.html
+
 ## Need Help?
 
 The sample pages (`font-samples.html` and `individual-font-showcase.html`) show exactly how "Jisnoo Dev Pal" will look in each font, helping you make an informed decision.
+
+Once deployed, you can view the samples at:
+- `https://jisnoo123.github.io/font-samples.html`
+- `https://jisnoo123.github.io/individual-font-showcase.html`

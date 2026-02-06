@@ -5,65 +5,65 @@
     box-sizing: border-box;
 }
 
-/* Light Mode Colors (Default) - White/Light Theme */
+/* Light Mode Colors (Default) - Professional Academic Theme */
 :root {
-    --primary-color: #f59e0b;
-    --secondary-color: #eab308;
-    --accent-color: #fbbf24;
-    --background: #FA9F42;
-    --surface: #fef3c7;
-    --surface-alt: #F9F3B1;
-    --text-primary: #1c1917;
-    --text-secondary: #44403c;
-    --text-tertiary: #78716c;
-    --border-color: #fde68a;
-    --shadow: rgba(0, 0, 0, 0.08);
-    --shadow-lg: rgba(0, 0, 0, 0.12);
-    --navbar-bg: #1c1917;
-    --navbar-text: #fef3c7;
+    --primary-color: #2563eb;
+    --secondary-color: #1e40af;
+    --accent-color: #3b82f6;
+    --background: #f8fafc;
+    --surface: #ffffff;
+    --surface-alt: #f1f5f9;
+    --text-primary: #1e293b;
+    --text-secondary: #475569;
+    --text-tertiary: #64748b;
+    --border-color: #e2e8f0;
+    --shadow: rgba(0, 0, 0, 0.05);
+    --shadow-lg: rgba(0, 0, 0, 0.1);
+    --navbar-bg: #1e293b;
+    --navbar-text: #f8fafc;
     --hero-bg: #ffffff;
     --card-bg: #ffffff;
-    --news-to-footer-bg: #FA9F42;
+    --news-to-footer-bg: #f8fafc;
 }
 
-/* Dark Mode Colors - Black Theme - Applied to html element during initial load */
+/* Dark Mode Colors - Professional Dark Theme - Applied to html element during initial load */
 html.dark-mode-loading {
-    --primary-color: #fbbf24;
-    --secondary-color: #f59e0b;
-    --accent-color: #eab308;
-    --background: #0a0a0a;
-    --surface: #171717;
-    --surface-alt: #262626;
-    --text-primary: #fef3c7;
-    --text-secondary: #d6d3d1;
-    --text-tertiary: #a8a29e;
-    --border-color: #404040;
+    --primary-color: #60a5fa;
+    --secondary-color: #3b82f6;
+    --accent-color: #93c5fd;
+    --background: #0f172a;
+    --surface: #1e293b;
+    --surface-alt: #334155;
+    --text-primary: #f1f5f9;
+    --text-secondary: #cbd5e1;
+    --text-tertiary: #94a3b8;
+    --border-color: #334155;
     --shadow: rgba(0, 0, 0, 0.5);
     --shadow-lg: rgba(0, 0, 0, 0.7);
-    --navbar-bg: #000000;
-    --navbar-text: #fef3c7;
-    --hero-bg: linear-gradient(135deg, #000000 0%, #171717 100%);
-    --card-bg: #171717;
+    --navbar-bg: #020617;
+    --navbar-text: #f1f5f9;
+    --hero-bg: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    --card-bg: #1e293b;
 }
 
-/* Dark Mode Colors - Black Theme - Applied to body element after JS loads */
+/* Dark Mode Colors - Professional Dark Theme - Applied to body element after JS loads */
 body.dark-mode {
-    --primary-color: #fbbf24;
-    --secondary-color: #f59e0b;
-    --accent-color: #eab308;
-    --background: #0a0a0a;
-    --surface: #171717;
-    --surface-alt: #262626;
-    --text-primary: #fef3c7;
-    --text-secondary: #d6d3d1;
-    --text-tertiary: #a8a29e;
-    --border-color: #404040;
+    --primary-color: #60a5fa;
+    --secondary-color: #3b82f6;
+    --accent-color: #93c5fd;
+    --background: #0f172a;
+    --surface: #1e293b;
+    --surface-alt: #334155;
+    --text-primary: #f1f5f9;
+    --text-secondary: #cbd5e1;
+    --text-tertiary: #94a3b8;
+    --border-color: #334155;
     --shadow: rgba(0, 0, 0, 0.5);
     --shadow-lg: rgba(0, 0, 0, 0.7);
-    --navbar-bg: #000000;
-    --navbar-text: #fef3c7;
-    --hero-bg: linear-gradient(135deg, #000000 0%, #171717 100%);
-    --card-bg: #171717;
+    --navbar-bg: #020617;
+    --navbar-text: #f1f5f9;
+    --hero-bg: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    --card-bg: #1e293b;
 }
 
 body {
@@ -186,8 +186,8 @@ html {
 
 .theme-toggle .bulb-icon {
     display: block;
-    /* Apply color #FF8552 (orange) to bulb icon in light mode for better visual appearance */
-    filter: invert(54%) sepia(77%) saturate(1847%) hue-rotate(336deg) brightness(102%) contrast(101%);
+    /* Apply professional blue color to bulb icon in light mode */
+    filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(203deg) brightness(97%) contrast(97%);
 }
 
 .theme-toggle .bulb-off-icon {
@@ -1542,4 +1542,104 @@ body.dark-mode .specialization-item:hover {
     display: inline-block;
     vertical-align: middle;
     margin-right: 0.5rem;
+}
+
+/* Research Interests Section */
+.research-interests-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.interest-item {
+    padding: 1.5rem;
+    background: rgba(37, 99, 235, 0.05);
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+body.dark-mode .interest-item {
+    background: rgba(96, 165, 250, 0.1);
+}
+
+.interest-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px var(--shadow);
+}
+
+.interest-item h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: var(--primary-color);
+}
+
+.interest-item p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    font-size: 1.05rem;
+}
+
+/* Publications Section */
+.publications-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.publication-item {
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+body.dark-mode .publication-item {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.publication-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px var(--shadow);
+}
+
+.publication-item h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.publication-authors {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.publication-venue {
+    color: var(--primary-color);
+    font-weight: 500;
+    font-style: italic;
+    margin-bottom: 0.75rem;
+}
+
+.no-publications {
+    text-align: center;
+    color: var(--text-tertiary);
+    font-style: italic;
+    padding: 2rem;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+    .research-interests-list {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .interest-item {
+        padding: 1.25rem;
+    }
 }

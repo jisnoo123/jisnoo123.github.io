@@ -67,7 +67,7 @@ body.dark-mode {
 }
 
 body {
-    font-family: 'Times New Roman', serif;
+    font-family: Arial, sans-serif;
     line-height: 1.7;
     color: var(--text-primary);
     background-color: var(--background);

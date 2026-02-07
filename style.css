@@ -150,11 +150,11 @@ html {
 }
 
 .nav-brand[aria-current="page"] {
-    color: var(--primary-color);
+    color: #FBF437;
 }
 
 .nav-brand {
-    color: var(--secondary-color);
+    color: #FBF437;
     font-size: 1.25rem;
     font-weight: 700;
     letter-spacing: -0.5px;
@@ -170,7 +170,7 @@ html {
 }
 
 .nav-brand:hover {
-    color: var(--primary-color);
+    color: #FBF437;
     text-decoration: none;
 }
 

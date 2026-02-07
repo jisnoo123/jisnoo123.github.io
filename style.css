@@ -782,6 +782,13 @@ body.dark-mode #news ~ .section {
     opacity: 0.8;
 }
 
+/* Dark mode: Set footer text to pure white */
+html.dark-mode-loading .footer p,
+body.dark-mode .footer p {
+    color: #FFFFFF;
+    opacity: 1;
+}
+
 /* Responsive Design - Mobile & Tablet Optimization */
 
 /* Tablet (Portrait & Landscape) - 768px to 1024px */

@@ -35,7 +35,7 @@ html.dark-mode-loading {
     --background: #0a0a0a;
     --surface: #171717;
     --surface-alt: #262626;
-    --text-primary: #fef3c7;
+    --text-primary: #e5e7eb;
     --text-secondary: #d6d3d1;
     --text-tertiary: #a8a29e;
     --border-color: #404040;
@@ -43,7 +43,7 @@ html.dark-mode-loading {
     --shadow: rgba(0, 0, 0, 0.5);
     --shadow-lg: rgba(0, 0, 0, 0.7);
     --navbar-bg: #22181C;
-    --navbar-text: #fef3c7;
+    --navbar-text: #e5e7eb;
     --hero-bg: linear-gradient(135deg, #000000 0%, #171717 100%);
     --card-bg: #171717;
 }
@@ -56,7 +56,7 @@ body.dark-mode {
     --background: #0a0a0a;
     --surface: #171717;
     --surface-alt: #262626;
-    --text-primary: #fef3c7;
+    --text-primary: #e5e7eb;
     --text-secondary: #d6d3d1;
     --text-tertiary: #a8a29e;
     --border-color: #404040;
@@ -64,7 +64,7 @@ body.dark-mode {
     --shadow: rgba(0, 0, 0, 0.5);
     --shadow-lg: rgba(0, 0, 0, 0.7);
     --navbar-bg: #22181C;
-    --navbar-text: #fef3c7;
+    --navbar-text: #e5e7eb;
     --hero-bg: linear-gradient(135deg, #000000 0%, #171717 100%);
     --card-bg: #171717;
 }
@@ -164,6 +164,22 @@ html {
     gap: 0.5rem;
 }
 
+/* Dark mode: Set navbar brand "Jisnoo" color to light gray */
+html.dark-mode-loading .nav-brand,
+body.dark-mode .nav-brand {
+    color: #e5e7eb;
+}
+
+html.dark-mode-loading .nav-brand:hover,
+body.dark-mode .nav-brand:hover {
+    color: #e5e7eb;
+}
+
+html.dark-mode-loading .nav-brand[aria-current="page"],
+body.dark-mode .nav-brand[aria-current="page"] {
+    color: #e5e7eb;
+}
+
 .nav-brand-icon {
     flex-shrink: 0;
     vertical-align: middle;
@@ -255,10 +271,10 @@ html {
     margin-bottom: 0.5rem;
 }
 
-/* Dark mode: Set "Jisnoo Dev Pal" color to #FFCB05 */
+/* Dark mode: Set "Jisnoo Dev Pal" color to light gray */
 html.dark-mode-loading .hero h1,
 body.dark-mode .hero h1 {
-    color: #FFCB05;
+    color: #e5e7eb;
 }
 
 .hero .subtitle {
@@ -373,10 +389,10 @@ body.dark-mode .hero-link {
     transition: width 0.3s ease;
 }
 
-/* Dark mode: golden yellow underline for section headings */
+/* Dark mode: light gray underline for section headings */
 html.dark-mode-loading .section h2::after,
 body.dark-mode .section h2::after {
-    background: #FDDA24;
+    background: #9ca3af;
 }
 
 .section:hover h2::after {

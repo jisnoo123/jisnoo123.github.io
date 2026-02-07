@@ -362,9 +362,15 @@ body.dark-mode .hero-link {
     left: 0;
     width: 60px;
     height: 4px;
-    background: #FDDA24;
+    background: #000033;
     border-radius: 2px;
     transition: width 0.3s ease;
+}
+
+/* Dark mode: golden yellow underline for section headings */
+html.dark-mode-loading .section h2::after,
+body.dark-mode .section h2::after {
+    background: #FDDA24;
 }
 
 .section:hover h2::after {

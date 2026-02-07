@@ -191,7 +191,6 @@ html {
 }
 
 .theme-toggle:hover {
-    background: var(--surface);
     border-color: var(--secondary-color);
 }
 

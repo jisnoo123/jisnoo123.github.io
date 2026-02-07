@@ -187,6 +187,13 @@ html {
     border-color: var(--secondary-color);
 }
 
+.theme-toggle:focus,
+.theme-toggle:active {
+    outline: none;
+    border-color: var(--theme-toggle-border);
+    background: transparent;
+}
+
 .theme-toggle .theme-icon {
     display: block;
 }

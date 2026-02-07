@@ -166,7 +166,7 @@ html {
 /* Theme Toggle Button */
 .theme-toggle {
     background: transparent;
-    border: 2px solid var(--border-color);
+    border: 2px solid var(--navbar-text);
     border-radius: 8px;
     width: 40px;
     height: 40px;
@@ -184,21 +184,7 @@ html {
     border-color: var(--secondary-color);
 }
 
-.theme-toggle .bulb-icon {
-    display: block;
-    /* Apply color #FF8552 (orange) to bulb icon in light mode for better visual appearance */
-    filter: invert(54%) sepia(77%) saturate(1847%) hue-rotate(336deg) brightness(102%) contrast(101%);
-}
-
-.theme-toggle .bulb-off-icon {
-    display: none;
-}
-
-body.dark-mode .theme-toggle .bulb-icon {
-    display: none;
-}
-
-body.dark-mode .theme-toggle .bulb-off-icon {
+.theme-toggle .theme-icon {
     display: block;
 }
 

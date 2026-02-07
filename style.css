@@ -164,14 +164,14 @@ html {
     gap: 0.5rem;
 }
 
-/* Dark mode: Set navbar brand "Jisnoo" color to pale yellow */
+/* Dark mode: Keep navbar brand "Jisnoo" at original bright yellow */
 html.dark-mode-loading .nav-brand,
 html.dark-mode-loading .nav-brand:hover,
 html.dark-mode-loading .nav-brand[aria-current="page"],
 body.dark-mode .nav-brand,
 body.dark-mode .nav-brand:hover,
 body.dark-mode .nav-brand[aria-current="page"] {
-    color: #FAFF81;
+    color: #FBF437;
 }
 
 .nav-brand-icon {
@@ -265,10 +265,10 @@ body.dark-mode .nav-brand[aria-current="page"] {
     margin-bottom: 0.5rem;
 }
 
-/* Dark mode: Set "Jisnoo Dev Pal" color to pale yellow */
+/* Dark mode: Keep "Jisnoo Dev Pal" at original golden yellow */
 html.dark-mode-loading .hero h1,
 body.dark-mode .hero h1 {
-    color: #FAFF81;
+    color: #FFCB05;
 }
 
 .hero .subtitle {

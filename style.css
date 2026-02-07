@@ -17,6 +17,7 @@
     --text-secondary: #44403c;
     --text-tertiary: #78716c;
     --border-color: #fde68a;
+    --theme-toggle-border: #404040;
     --shadow: rgba(0, 0, 0, 0.08);
     --shadow-lg: rgba(0, 0, 0, 0.12);
     --navbar-bg: #1c1917;
@@ -38,6 +39,7 @@ html.dark-mode-loading {
     --text-secondary: #d6d3d1;
     --text-tertiary: #a8a29e;
     --border-color: #404040;
+    --theme-toggle-border: #404040;
     --shadow: rgba(0, 0, 0, 0.5);
     --shadow-lg: rgba(0, 0, 0, 0.7);
     --navbar-bg: #000000;
@@ -58,6 +60,7 @@ body.dark-mode {
     --text-secondary: #d6d3d1;
     --text-tertiary: #a8a29e;
     --border-color: #404040;
+    --theme-toggle-border: #404040;
     --shadow: rgba(0, 0, 0, 0.5);
     --shadow-lg: rgba(0, 0, 0, 0.7);
     --navbar-bg: #000000;
@@ -166,7 +169,7 @@ html {
 /* Theme Toggle Button */
 .theme-toggle {
     background: transparent;
-    border: 2px solid #404040;
+    border: 2px solid var(--theme-toggle-border);
     border-radius: 8px;
     width: 40px;
     height: 40px;

@@ -42,8 +42,8 @@ document.addEventListener('DOMContentLoaded', function() {
         logoIcons.forEach(icon => {
             const src = icon.getAttribute('src');
             
-            // Skip bulb icons - they are handled by CSS display properties
-            if (src.includes('bulb.png') || src.includes('bulb_off.png')) {
+            // Skip theme toggle icon - it's the same in both modes
+            if (src.includes('light_dark_mode.png')) {
                 return;
             }
             

@@ -166,16 +166,10 @@ html {
 
 /* Dark mode: Set navbar brand "Jisnoo" color to light gray */
 html.dark-mode-loading .nav-brand,
-body.dark-mode .nav-brand {
-    color: #e5e7eb;
-}
-
 html.dark-mode-loading .nav-brand:hover,
-body.dark-mode .nav-brand:hover {
-    color: #e5e7eb;
-}
-
 html.dark-mode-loading .nav-brand[aria-current="page"],
+body.dark-mode .nav-brand,
+body.dark-mode .nav-brand:hover,
 body.dark-mode .nav-brand[aria-current="page"] {
     color: #e5e7eb;
 }

@@ -159,6 +159,14 @@ html {
     font-weight: 700;
     letter-spacing: -0.5px;
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nav-brand-icon {
+    flex-shrink: 0;
+    vertical-align: middle;
 }
 
 .nav-brand:hover {

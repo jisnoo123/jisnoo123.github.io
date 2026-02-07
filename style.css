@@ -10,7 +10,7 @@
     --primary-color: #f59e0b;
     --secondary-color: #eab308;
     --accent-color: #fbbf24;
-    --background: #FA9F42;
+    --background: #FFFACD;
     --surface: #fef3c7;
     --surface-alt: #F9F3B1;
     --text-primary: #1c1917;
@@ -23,7 +23,7 @@
     --navbar-text: #fef3c7;
     --hero-bg: #ffffff;
     --card-bg: #ffffff;
-    --news-to-footer-bg: #FA9F42;
+    --news-to-footer-bg: #FFFACD;
 }
 
 /* Dark Mode Colors - Black Theme - Applied to html element during initial load */
@@ -67,7 +67,7 @@ body.dark-mode {
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-family: Georgia, serif;
     line-height: 1.7;
     color: var(--text-primary);
     background-color: var(--background);
@@ -358,7 +358,7 @@ body.dark-mode .hero-link {
     left: 0;
     width: 60px;
     height: 4px;
-    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    background: #000033;
     border-radius: 2px;
     transition: width 0.3s ease;
 }

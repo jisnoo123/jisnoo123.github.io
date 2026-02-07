@@ -35,7 +35,7 @@ html.dark-mode-loading {
     --background: #0a0a0a;
     --surface: #171717;
     --surface-alt: #262626;
-    --text-primary: #e5e7eb;
+    --text-primary: #FAFF81;
     --text-secondary: #d6d3d1;
     --text-tertiary: #a8a29e;
     --border-color: #404040;
@@ -43,7 +43,7 @@ html.dark-mode-loading {
     --shadow: rgba(0, 0, 0, 0.5);
     --shadow-lg: rgba(0, 0, 0, 0.7);
     --navbar-bg: #22181C;
-    --navbar-text: #e5e7eb;
+    --navbar-text: #FAFF81;
     --hero-bg: linear-gradient(135deg, #000000 0%, #171717 100%);
     --card-bg: #171717;
 }
@@ -56,7 +56,7 @@ body.dark-mode {
     --background: #0a0a0a;
     --surface: #171717;
     --surface-alt: #262626;
-    --text-primary: #e5e7eb;
+    --text-primary: #FAFF81;
     --text-secondary: #d6d3d1;
     --text-tertiary: #a8a29e;
     --border-color: #404040;
@@ -64,7 +64,7 @@ body.dark-mode {
     --shadow: rgba(0, 0, 0, 0.5);
     --shadow-lg: rgba(0, 0, 0, 0.7);
     --navbar-bg: #22181C;
-    --navbar-text: #e5e7eb;
+    --navbar-text: #FAFF81;
     --hero-bg: linear-gradient(135deg, #000000 0%, #171717 100%);
     --card-bg: #171717;
 }
@@ -164,14 +164,14 @@ html {
     gap: 0.5rem;
 }
 
-/* Dark mode: Set navbar brand "Jisnoo" color to light gray */
+/* Dark mode: Set navbar brand "Jisnoo" color to pale yellow */
 html.dark-mode-loading .nav-brand,
 html.dark-mode-loading .nav-brand:hover,
 html.dark-mode-loading .nav-brand[aria-current="page"],
 body.dark-mode .nav-brand,
 body.dark-mode .nav-brand:hover,
 body.dark-mode .nav-brand[aria-current="page"] {
-    color: #e5e7eb;
+    color: #FAFF81;
 }
 
 .nav-brand-icon {
@@ -265,10 +265,10 @@ body.dark-mode .nav-brand[aria-current="page"] {
     margin-bottom: 0.5rem;
 }
 
-/* Dark mode: Set "Jisnoo Dev Pal" color to light gray */
+/* Dark mode: Set "Jisnoo Dev Pal" color to pale yellow */
 html.dark-mode-loading .hero h1,
 body.dark-mode .hero h1 {
-    color: #e5e7eb;
+    color: #FAFF81;
 }
 
 .hero .subtitle {

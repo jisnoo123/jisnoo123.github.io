@@ -255,6 +255,12 @@ html {
     margin-bottom: 0.5rem;
 }
 
+/* Dark mode: Set "Jisnoo Dev Pal" color to #FFCB05 */
+html.dark-mode-loading .hero h1,
+body.dark-mode .hero h1 {
+    color: #FFCB05;
+}
+
 .hero .subtitle {
     font-size: 1.15rem;
     color: var(--text-secondary);

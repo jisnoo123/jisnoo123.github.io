@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // because the navbar is always dark in both light and dark modes
             if (src.includes('menu-dark.png') || src.includes('close-dark.png') ||
                 src.includes('teaching_resources-dark.png') || src.includes('blogs-dark.png') ||
-                src.includes('gallery-dark.png')) {
+                src.includes('gallery-dark.png') || src.includes('home-dark.png')) {
                 return;
             }
             

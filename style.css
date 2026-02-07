@@ -189,7 +189,8 @@ html {
 
 .theme-toggle:focus,
 .theme-toggle:active {
-    outline: none;
+    outline: 2px solid var(--secondary-color);
+    outline-offset: 2px;
     border-color: var(--theme-toggle-border);
     background: transparent;
 }

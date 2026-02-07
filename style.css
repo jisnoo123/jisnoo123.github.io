@@ -35,15 +35,15 @@ html.dark-mode-loading {
     --background: #0a0a0a;
     --surface: #171717;
     --surface-alt: #262626;
-    --text-primary: #fef3c7;
-    --text-secondary: #d6d3d1;
-    --text-tertiary: #a8a29e;
+    --text-primary: #FFFFFF;
+    --text-secondary: #FFFFFF;
+    --text-tertiary: #FFFFFF;
     --border-color: #404040;
     --theme-toggle-border: #404040;
     --shadow: rgba(0, 0, 0, 0.5);
     --shadow-lg: rgba(0, 0, 0, 0.7);
     --navbar-bg: #22181C;
-    --navbar-text: #fef3c7;
+    --navbar-text: #FFFFFF;
     --hero-bg: linear-gradient(135deg, #000000 0%, #171717 100%);
     --card-bg: #171717;
 }
@@ -56,15 +56,15 @@ body.dark-mode {
     --background: #0a0a0a;
     --surface: #171717;
     --surface-alt: #262626;
-    --text-primary: #fef3c7;
-    --text-secondary: #d6d3d1;
-    --text-tertiary: #a8a29e;
+    --text-primary: #FFFFFF;
+    --text-secondary: #FFFFFF;
+    --text-tertiary: #FFFFFF;
     --border-color: #404040;
     --theme-toggle-border: #404040;
     --shadow: rgba(0, 0, 0, 0.5);
     --shadow-lg: rgba(0, 0, 0, 0.7);
     --navbar-bg: #22181C;
-    --navbar-text: #fef3c7;
+    --navbar-text: #FFFFFF;
     --hero-bg: linear-gradient(135deg, #000000 0%, #171717 100%);
     --card-bg: #171717;
 }

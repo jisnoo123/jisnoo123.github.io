@@ -20,7 +20,7 @@
     --theme-toggle-border: #404040;
     --shadow: rgba(0, 0, 0, 0.08);
     --shadow-lg: rgba(0, 0, 0, 0.12);
-    --navbar-bg: #1c1917;
+    --navbar-bg: #262322;
     --navbar-text: #fef3c7;
     --hero-bg: #ffffff;
     --card-bg: #ffffff;
@@ -42,7 +42,7 @@ html.dark-mode-loading {
     --theme-toggle-border: #404040;
     --shadow: rgba(0, 0, 0, 0.5);
     --shadow-lg: rgba(0, 0, 0, 0.7);
-    --navbar-bg: #000000;
+    --navbar-bg: #262322;
     --navbar-text: #fef3c7;
     --hero-bg: linear-gradient(135deg, #000000 0%, #171717 100%);
     --card-bg: #171717;
@@ -63,7 +63,7 @@ body.dark-mode {
     --theme-toggle-border: #404040;
     --shadow: rgba(0, 0, 0, 0.5);
     --shadow-lg: rgba(0, 0, 0, 0.7);
-    --navbar-bg: #000000;
+    --navbar-bg: #262322;
     --navbar-text: #fef3c7;
     --hero-bg: linear-gradient(135deg, #000000 0%, #171717 100%);
     --card-bg: #171717;

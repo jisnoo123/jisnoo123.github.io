@@ -21,7 +21,7 @@
     --shadow: rgba(0, 0, 0, 0.08);
     --shadow-lg: rgba(0, 0, 0, 0.12);
     --navbar-bg: #22181C;
-    --navbar-text: #fef3c7;
+    --navbar-text: #FFFFFF;
     --hero-bg: #ffffff;
     --card-bg: #ffffff;
     --news-to-footer-bg: #FFFACD;
@@ -779,7 +779,8 @@ body.dark-mode #news ~ .section {
 
 .footer p {
     font-size: 1.25rem;
-    opacity: 0.8;
+    color: #FFFFFF;
+    opacity: 1;
 }
 
 /* Dark mode: Set footer text to pure white */

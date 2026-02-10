@@ -337,6 +337,14 @@ body.dark-mode .hero-link {
     box-shadow: 0 4px 12px var(--shadow);
     color: var(--background);
 }
+
+/* Dark mode: golden yellow background with pure black text on hover */
+html.dark-mode-loading .hero-link:hover,
+body.dark-mode .hero-link:hover {
+    background: #FFC904;
+    border-color: #FFC904;
+    color: #000000;
+}
 }
 
 /* Sections */

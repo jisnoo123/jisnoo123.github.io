@@ -1364,7 +1364,7 @@ body.dark-mode .project-row:hover {
 .education-item-compact {
     margin-bottom: 1.5rem;
     padding: 1.5rem;
-    background: rgba(255, 255, 255, 0.5);
+    background: #FFFAF0;
     border-radius: 8px;
     border-left: 4px solid var(--primary-color);
     transition: all 0.3s ease;
@@ -1418,7 +1418,7 @@ body.dark-mode .education-item-compact:hover {
     justify-content: space-between;
     gap: 1rem;
     padding: 1.5rem;
-    background: rgba(255, 255, 255, 0.5);
+    background: #FFFAF0;
     border-radius: 8px;
     transition: all 0.3s ease;
 }
@@ -1490,7 +1490,7 @@ body.dark-mode .honor-row:hover {
 .specialization-item {
     margin-bottom: 1rem;
     padding: 1.5rem;
-    background: rgba(255, 255, 255, 0.5);
+    background: #FFFAF0;
     border-radius: 8px;
     border-left: 4px solid var(--primary-color);
     transition: all 0.3s ease;

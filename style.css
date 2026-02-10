@@ -320,9 +320,16 @@ body.dark-mode .hero-bio {
     display: flex;
     gap: 1.5rem;
     margin-top: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+.hero-email-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
 }
 
 .hero-link {

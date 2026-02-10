@@ -140,7 +140,7 @@ html {
 }
 
 .nav-link:hover {
-    color: var(--secondary-color);
+    color: #FFC904;
     opacity: 1;
 }
 

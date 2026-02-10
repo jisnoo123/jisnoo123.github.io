@@ -196,13 +196,13 @@ html {
     color: var(--navbar-text);
 }
 
-/* Desktop toggle - visible on desktop, hidden on mobile */
+/* Desktop toggle - visible on desktop (default), hidden on mobile/tablet */
 .theme-toggle-desktop {
     display: flex;
     margin-left: 1rem;
 }
 
-/* Mobile toggle - hidden on desktop, visible on mobile */
+/* Mobile toggle - hidden on desktop (default), shown on mobile/tablet via media query */
 .theme-toggle-mobile {
     display: none;
 }

@@ -451,10 +451,7 @@ body.dark-mode .section h2::after {
     margin-bottom: 4rem;
 }
 
-body.dark-mode .content-box {
-    background: var(--card-bg);
-}
-
+body.dark-mode .content-box,
 html.dark-mode-loading .content-box {
     background: var(--card-bg);
 }

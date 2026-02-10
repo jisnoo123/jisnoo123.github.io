@@ -380,12 +380,10 @@ body.dark-mode .hero-link:hover {
     border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 8px;
     color: var(--text-primary);
-    text-decoration: none;
     font-size: 0.9rem;
     font-weight: 500;
     backdrop-filter: blur(10px);
     cursor: default;
-    pointer-events: none;
 }
 
 body.dark-mode .hero-email {

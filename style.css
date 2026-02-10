@@ -113,12 +113,6 @@ html {
     width: 100%;
 }
 
-.nav-controls {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
 .nav-menu {
     display: flex;
     align-items: center;
@@ -193,6 +187,7 @@ html {
     justify-content: center;
     transition: all 0.3s ease;
     color: var(--navbar-text);
+    margin-left: 1rem;
 }
 
 .theme-toggle:hover {
@@ -850,13 +845,6 @@ body.dark-mode .footer p {
         justify-content: center;
     }
     
-    /* Keep nav-controls visible with theme toggle and hamburger */
-    .nav-controls {
-        display: flex;
-        align-items: center;
-        gap: 0.75rem;
-    }
-    
     /* Hide nav menu by default on mobile, show as dropdown */
     .nav-menu {
         position: absolute;
@@ -885,6 +873,11 @@ body.dark-mode .footer p {
     
     .nav-link:last-of-type {
         border-bottom: none;
+    }
+    
+    .theme-toggle {
+        margin: 1rem 1.5rem;
+        align-self: flex-start;
     }
     
     /* Minimal Header */
@@ -1019,10 +1012,6 @@ body.dark-mode .footer p {
         font-size: 1.15rem;
     }
     
-    .nav-controls {
-        gap: 0.5rem;
-    }
-    
     .mobile-menu-toggle {
         width: 36px;
         height: 36px;
@@ -1036,6 +1025,7 @@ body.dark-mode .footer p {
     .theme-toggle {
         width: 36px;
         height: 36px;
+        margin: 1rem;
     }
     
     /* Hero Section */

@@ -140,8 +140,9 @@ html {
 }
 
 .nav-link:hover {
-    color: var(--secondary-color);
+    color: #FBF437;
     opacity: 1;
+    font-weight: 700;
 }
 
 .nav-link[aria-current="page"] {

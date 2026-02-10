@@ -1,6 +1,7 @@
 // Dark Mode Toggle
 document.addEventListener('DOMContentLoaded', function() {
-    const themeToggle = document.getElementById('themeToggle');
+    const themeToggleDesktop = document.getElementById('themeToggleDesktop');
+    const themeToggleMobile = document.getElementById('themeToggleMobile');
     const body = document.body;
     const html = document.documentElement;
     const mobileMenuToggle = document.getElementById('mobileMenuToggle');
@@ -147,14 +148,23 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // Toggle theme
-    themeToggle.addEventListener('click', function() {
+    // Toggle theme function for both buttons
+    function toggleTheme() {
         // Determine new theme (opposite of current)
         const newTheme = body.classList.contains('dark-mode') ? 'light' : 'dark';
         
         // Apply the new theme and save to localStorage
         applyTheme(newTheme, true);
-    });
+    }
+    
+    // Add click listeners to both toggle buttons
+    if (themeToggleDesktop) {
+        themeToggleDesktop.addEventListener('click', toggleTheme);
+    }
+    
+    if (themeToggleMobile) {
+        themeToggleMobile.addEventListener('click', toggleTheme);
+    }
     
     // Smooth scroll for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {

@@ -196,6 +196,17 @@ html {
     color: var(--navbar-text);
 }
 
+/* Desktop toggle - visible on desktop, hidden on mobile */
+.theme-toggle-desktop {
+    display: flex;
+    margin-left: 1rem;
+}
+
+/* Mobile toggle - hidden on desktop, visible on mobile */
+.theme-toggle-mobile {
+    display: none;
+}
+
 .theme-toggle:hover {
     background: var(--surface);
     border-color: var(--secondary-color);
@@ -844,11 +855,20 @@ body.dark-mode .footer p {
         padding-right: 1.5rem;
     }
     
-    /* Show mobile menu toggle, keep theme toggle visible */
+    /* Show mobile menu toggle and mobile theme toggle */
     .mobile-menu-toggle {
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+    
+    /* Hide desktop toggle, show mobile toggle */
+    .theme-toggle-desktop {
+        display: none;
+    }
+    
+    .theme-toggle-mobile {
+        display: flex;
     }
     
     /* Hide nav menu by default on mobile, show as dropdown */

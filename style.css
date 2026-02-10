@@ -332,6 +332,16 @@ body.dark-mode .hero-bio {
     margin-bottom: 2rem;
 }
 
+.hero-email {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
 .hero-link {
     display: flex;
     align-items: center;

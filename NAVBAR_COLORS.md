@@ -15,12 +15,13 @@ This is a bright yellow color that remains consistent across:
 
 Navigation links (Teaching & Resources, Blogs, Gallery) use:
 - Default: `#FFFFFF` (white)
-- Hover: `#FFC904` (golden yellow)
+- Hover: `#FBF437` (bright yellow - same as brand)
 - Active/current page: Uses `var(--secondary-color)`
 
 ## Location in Code
 
-Brand color is defined in `style.css`:
+Colors are defined in `style.css`:
+- Line 143: `.nav-link:hover { color: #FBF437; }`
 - Line 157: `.nav-brand { color: #FBF437; }`
 - Line 173: `.nav-brand:hover { color: #FBF437; }`
 - Line 153: `.nav-brand[aria-current="page"] { color: #FBF437; }`

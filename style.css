@@ -369,6 +369,28 @@ body.dark-mode .hero-link:hover {
     border-color: #FFC904;
     color: #000000;
 }
+
+/* Email link - no hover effects or transitions */
+.hero-email {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background: rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    font-weight: 500;
+    backdrop-filter: blur(10px);
+    cursor: default;
+}
+
+body.dark-mode .hero-email {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--text-primary);
+}
 }
 
 /* Sections */

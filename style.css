@@ -348,15 +348,11 @@ body.dark-mode .hero-bio {
     backdrop-filter: blur(10px);
 }
 
-body.dark-mode .hero-link {
-    background: rgba(255, 255, 255, 0.15);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    color: var(--text-primary);
-}
-
+body.dark-mode .hero-link,
 html.dark-mode-loading .hero-link {
     background: rgba(255, 255, 255, 0.15);
     border: 1px solid rgba(255, 255, 255, 0.3);
+    color: var(--text-primary);
 }
 
 .hero-link:hover {

@@ -349,9 +349,14 @@ body.dark-mode .hero-bio {
 }
 
 body.dark-mode .hero-link {
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     color: var(--text-primary);
+}
+
+html.dark-mode-loading .hero-link {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .hero-link:hover {

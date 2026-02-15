@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 
-/* Light Mode Colors (Default) - White/Light Theme */
+/* Light Mode Colors (Default) - Warm Academic Theme */
 :root {
     --primary-color: #f59e0b;
     --secondary-color: #eab308;
@@ -27,7 +27,7 @@
     --news-to-footer-bg: #FFFACD;
 }
 
-/* Dark Mode Colors - Black Theme - Applied to html element during initial load */
+/* Dark Mode Colors - Warm Dark Theme - Applied to html element during initial load */
 html.dark-mode-loading {
     --primary-color: #fbbf24;
     --secondary-color: #f59e0b;
@@ -48,7 +48,7 @@ html.dark-mode-loading {
     --card-bg: #171717;
 }
 
-/* Dark Mode Colors - Black Theme - Applied to body element after JS loads */
+/* Dark Mode Colors - Warm Dark Theme - Applied to body element after JS loads */
 body.dark-mode {
     --primary-color: #fbbf24;
     --secondary-color: #f59e0b;
@@ -1634,4 +1634,67 @@ body.dark-mode .specialization-item:hover {
     display: inline-block;
     vertical-align: middle;
     margin-right: 0.5rem;
+}
+
+/* Publications Section */
+.publications-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.publication-item {
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+body.dark-mode .publication-item {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.publication-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px var(--shadow);
+}
+
+.publication-item h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.publication-authors {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.publication-venue {
+    color: var(--primary-color);
+    font-weight: 500;
+    font-style: italic;
+    margin-bottom: 0.75rem;
+}
+
+.no-publications {
+    text-align: center;
+    color: var(--text-tertiary);
+    font-style: italic;
+    padding: 2rem;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+    .research-interests-list {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .interest-item {
+        padding: 1.25rem;
+    }
 }
